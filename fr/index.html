@@ -92,7 +92,7 @@ section{padding:120px 0}
 .book .top{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:30px}
 .book h3{font-family:"Cormorant Garamond",serif;font-weight:400;font-size:52px}
 .book .close{background:none;border:1px solid #fff;color:#fff;padding:8px 16px;font:inherit;font-size:12px;letter-spacing:.2em;cursor:pointer}
-.book .grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.book .grid{display:grid;grid-template-columns:repeat(4,1fr);gap:26px 22px}
 .book .grid img{aspect-ratio:3/4;object-fit:cover;width:100%}
 .book .grid video{aspect-ratio:9/16;object-fit:cover;width:100%}
 @media(max-width:900px){.book .grid{grid-template-columns:repeat(2,1fr)}}
@@ -294,12 +294,12 @@ html[lang=fr] [data-en]{display:none}
 </footer>
 
 <script>
-const ASSET_V="202609251044";
+const ASSET_V="202609251048";
 const BOOKS={
- sofia:{name:"Sofia",imgs:["sofia-portrait","sofia-1","sofia-2","sofia-3","sofia-4","sofia-5","sofia-bijoux-cou","sofia-bijoux-mains","sofia-bijoux-montre","sofia-bijoux-oreille"],video:"../video/sofia-monaco.mp4"},
- elin:{name:"Elin",imgs:["elin-portrait","elin-1","elin-2","elin-3","elin-4","elin-5","elin-bijoux-cou","elin-bijoux-mains","elin-bijoux-montre","elin-bijoux-oreille"],video:"../video/elin-monaco.mp4"},
- amara:{name:"Amara",imgs:["amara-portrait","amara-1","amara-2","amara-3","amara-4","amara-5","amara-bijoux-cou","amara-bijoux-mains","amara-bijoux-montre","amara-bijoux-oreille"],video:"../video/amara-cannes.mp4"},
- mei:{name:"Mei",imgs:["mei-portrait","mei-1","mei-2","mei-3","mei-4","mei-5","mei-bijoux-cou","mei-bijoux-mains","mei-bijoux-montre","mei-bijoux-oreille"],video:"../video/mei-monaco.mp4"}
+ sofia:{name:"Sofia",imgs:["sofia-portrait","sofia-1","sofia-bijoux-cou","sofia-2","sofia-3","sofia-bijoux-mains","sofia-4","sofia-bijoux-montre","sofia-5","sofia-bijoux-oreille"],video:"../video/sofia-monaco.mp4"},
+ elin:{name:"Elin",imgs:["elin-portrait","elin-1","elin-bijoux-cou","elin-2","elin-3","elin-bijoux-mains","elin-4","elin-bijoux-montre","elin-5","elin-bijoux-oreille"],video:"../video/elin-monaco.mp4"},
+ amara:{name:"Amara",imgs:["amara-portrait","amara-1","amara-bijoux-cou","amara-2","amara-3","amara-bijoux-mains","amara-4","amara-bijoux-montre","amara-5","amara-bijoux-oreille"],video:"../video/amara-cannes.mp4"},
+ mei:{name:"Mei",imgs:["mei-portrait","mei-1","mei-bijoux-cou","mei-2","mei-3","mei-bijoux-mains","mei-4","mei-bijoux-montre","mei-5","mei-bijoux-oreille"],video:"../video/mei-monaco.mp4"}
 };
 const book=document.getElementById('book'),grid=document.getElementById('bookGrid');
 document.querySelectorAll('[data-book]').forEach(b=>b.addEventListener('click',()=>{
