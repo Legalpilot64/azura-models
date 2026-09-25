@@ -1,0 +1,310 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AZURA Models — AI Model Agency, French Riviera</title>
+<meta name="description" content="AZURA Models is an AI model agency on the French Riviera. Photos and short videos of your products, worn by our virtual models, in dream locations — delivered in days, without a photoshoot.">
+<meta property="og:title" content="AZURA Models — AI Model Agency">
+<meta property="og:description" content="Your products, worn by our virtual models, in dream locations. Delivered in days.">
+<meta property="og:image" content="img/sofia-portrait.webp">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#141414;--cream:#f6f1ea;--sand:#e9e0d3;--muted:#6f675e;--line:#d8cfc2;--accent:#1f4e5f}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Inter,system-ui,sans-serif;font-weight:300;color:var(--ink);background:var(--cream);line-height:1.6;-webkit-font-smoothing:antialiased}
+img,video{display:block;max-width:100%}
+.models>*,.plans>*,.cols>*,.book .grid>*,.showcase>*,.about>*,.hero>*{min-width:0}
+html,body{overflow-x:clip}
+a{color:inherit}
+.serif{font-family:"Cormorant Garamond",Georgia,serif;font-weight:400}
+.wrap{max-width:1180px;margin:0 auto;padding:0 24px}
+/* nav */
+header{position:fixed;inset:0 0 auto;z-index:20;transition:background .3s}
+header.solid{background:rgba(246,241,234,.94);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:68px;position:relative}
+@media(min-width:1280px){.links{position:absolute;left:calc(50% + 32px);right:24px;justify-content:space-between}}
+@media(max-width:1279px){header:not(.solid){background:linear-gradient(180deg,rgba(17,17,17,.85),rgba(17,17,17,.55))}.links{gap:20px}}
+.logo{font-family:"Cormorant Garamond",serif;font-size:26px;letter-spacing:.28em;text-decoration:none}
+.logo small{font-family:Inter;font-size:10px;letter-spacing:.35em;margin-left:6px;opacity:.7}
+.links{display:flex;gap:28px;align-items:center;font-size:12px;letter-spacing:.18em;text-transform:uppercase}
+.links a{text-decoration:none;opacity:.85}.links a:hover{opacity:1}
+.lang{border:1px solid currentColor;background:none;padding:4px 10px;font:inherit;font-size:11px;letter-spacing:.15em;cursor:pointer;color:inherit}
+header:not(.solid){color:#fff}
+@media(max-width:760px){.links a:not(.keep){display:none}.links{gap:14px}.logo{font-size:22px}}
+/* hero */
+.hero{position:relative;height:100vh;min-height:620px;max-height:980px;display:grid;grid-template-columns:1fr 1fr;grid-template-rows:minmax(0,1fr);background:#111;color:#fff;overflow:hidden}
+.hero .media{position:relative;min-height:0;height:100%}
+.hero .media video,.hero .media img{width:100%;height:100%;object-fit:cover}
+.hero .media::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.35),rgba(0,0,0,0) 30%,rgba(0,0,0,.25))}
+.hero .text{display:flex;flex-direction:column;justify-content:flex-end;padding:0 56px 90px}
+.eyebrow{font-size:11px;letter-spacing:.35em;text-transform:uppercase;opacity:.8}
+.hero h1{font-family:"Cormorant Garamond",serif;font-weight:400;font-size:clamp(44px,6vw,86px);line-height:1.02;margin:18px 0 22px}
+.hero h1 em{font-style:italic}
+.hero p{max-width:440px;opacity:.85}
+.btn{display:inline-block;margin-top:34px;padding:15px 30px;border:1px solid currentColor;text-decoration:none;font-size:12px;letter-spacing:.22em;text-transform:uppercase;transition:.25s}
+.btn:hover{background:#fff;color:#111}
+.btn.dark:hover{background:var(--ink);color:var(--cream)}
+@media(max-width:860px){.hero{grid-template-columns:1fr}.hero .media{position:absolute;inset:0}.hero .text{position:relative;z-index:2;padding:0 24px 70px;background:linear-gradient(0deg,rgba(0,0,0,.75),transparent)}}
+/* sections */
+section{padding:120px 0}
+.head{display:flex;justify-content:space-between;align-items:flex-end;gap:30px;margin-bottom:56px;flex-wrap:wrap}
+.head h2{font-family:"Cormorant Garamond",serif;font-weight:400;font-size:clamp(36px,4.4vw,58px);line-height:1.05}
+.head p{max-width:420px;color:var(--muted)}
+/* models */
+.models{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.model{cursor:pointer;text-align:left;background:none;border:0;padding:0;font:inherit;color:inherit;display:flex;flex-direction:column;justify-content:flex-start;align-self:start}
+.model .ph{aspect-ratio:3/4;overflow:hidden;background:var(--sand)}
+.model img{width:100%;height:100%;object-fit:cover;transition:transform .7s}
+.model:hover img{transform:scale(1.04)}
+.model h3{font-family:"Cormorant Garamond",serif;font-weight:400;font-size:30px;margin-top:14px}
+.model span{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+@media(max-width:900px){.models{grid-template-columns:repeat(2,1fr)}}
+/* book modal */
+.book{position:fixed;inset:0;z-index:50;background:rgba(20,20,20,.96);color:#fff;display:none;overflow:auto}
+.book.open{display:block}
+.book .inner{max-width:1280px;margin:0 auto;padding:40px 24px 80px}
+.book .top{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:30px}
+.book h3{font-family:"Cormorant Garamond",serif;font-weight:400;font-size:52px}
+.book .close{background:none;border:1px solid #fff;color:#fff;padding:8px 16px;font:inherit;font-size:12px;letter-spacing:.2em;cursor:pointer}
+.book .grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.book .grid img{aspect-ratio:3/4;object-fit:cover;width:100%}
+.book .grid video{aspect-ratio:9/16;object-fit:cover;width:100%}
+@media(max-width:900px){.book .grid{grid-template-columns:repeat(2,1fr)}}
+/* services */
+.dark{background:var(--ink);color:var(--cream)}
+.dark .head p{color:#b9b0a4}
+.cols{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:#333}
+.cols div{background:var(--ink);padding:38px 30px}
+.cols .n{font-family:"Cormorant Garamond",serif;font-size:44px;opacity:.5}
+.cols h4{font-family:"Cormorant Garamond",serif;font-weight:400;font-size:28px;margin:8px 0 10px}
+.cols p{color:#b9b0a4;font-size:15px}
+@media(max-width:860px){.cols{grid-template-columns:1fr}}
+.showcase{display:grid;grid-template-columns:1.1fr .9fr;gap:60px;align-items:center;margin-top:90px}
+.showcase video{width:100%;max-width:380px;margin-left:auto;aspect-ratio:9/16;object-fit:cover}
+.showcase h3{font-family:"Cormorant Garamond",serif;font-weight:400;font-size:40px;line-height:1.1;margin-bottom:16px}
+.showcase p{color:#b9b0a4;max-width:460px}
+@media(max-width:860px){.showcase{grid-template-columns:1fr}.showcase video{margin:0 auto}}
+/* pricing */
+.plans{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.plan{border:1px solid var(--line);padding:40px 32px;background:#fbf8f3;display:flex;flex-direction:column}
+.plan.feat{background:var(--ink);color:var(--cream);border-color:var(--ink)}
+.plan h4{font-size:12px;letter-spacing:.3em;text-transform:uppercase}
+.plan .price{font-family:"Cormorant Garamond",serif;font-size:54px;margin:18px 0 4px}
+.plan .per{font-size:13px;color:var(--muted)}.plan.feat .per{color:#b9b0a4}
+.plan ul{list-style:none;margin:26px 0 30px;font-size:15px}
+.plan li{padding:9px 0;border-top:1px solid var(--line)}.plan.feat li{border-color:#333}
+.plan .btn{margin-top:auto;text-align:center}
+.plan.feat .btn:hover{background:var(--cream);color:var(--ink)}
+@media(max-width:860px){.plans{grid-template-columns:1fr}}
+/* about */
+.about{display:grid;grid-template-columns:.8fr 1.2fr;gap:70px;align-items:center}
+.about img{aspect-ratio:4/5;object-fit:cover;width:100%}
+.about h2{font-family:"Cormorant Garamond",serif;font-weight:400;font-size:clamp(34px,4vw,54px);line-height:1.08;margin-bottom:22px}
+.about p{color:var(--muted);margin-bottom:16px;max-width:560px}
+.note{border-left:2px solid var(--accent);padding:6px 0 6px 18px;color:var(--ink)!important;font-size:15px}
+@media(max-width:860px){.about{grid-template-columns:1fr}}
+/* contact */
+.contact{text-align:center}
+.contact h2{font-family:"Cormorant Garamond",serif;font-weight:400;font-size:clamp(40px,5vw,72px);line-height:1.05}
+.contact p{color:var(--muted);margin:18px auto 0;max-width:520px}
+.contact a.mail{font-family:"Cormorant Garamond",serif;font-size:clamp(26px,3vw,38px);display:inline-block;margin-top:30px}
+footer{border-top:1px solid var(--line);padding:30px 0;font-size:12px;color:var(--muted)}
+footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+.book .grid img{cursor:zoom-in}
+.lb{position:fixed;inset:0;z-index:60;background:rgba(10,10,10,.97);display:none;align-items:center;justify-content:center}
+.lb.open{display:flex}
+.lb img{max-width:92vw;max-height:90vh;object-fit:contain;box-shadow:0 20px 60px rgba(0,0,0,.5)}
+.lb button{position:absolute;background:none;border:0;color:#fff;font:inherit;cursor:pointer;opacity:.8}
+.lb button:hover{opacity:1}
+.lb .x{top:18px;right:22px;font-size:13px;letter-spacing:.2em;border:1px solid #fff;padding:8px 14px}
+.lb .prev,.lb .next{top:50%;transform:translateY(-50%);font-size:46px;font-family:"Cormorant Garamond",serif;padding:20px}
+.lb .prev{left:8px}.lb .next{right:8px}
+.lb .count{position:absolute;bottom:18px;left:50%;transform:translateX(-50%);color:#bbb;font-size:12px;letter-spacing:.2em}
+@media(max-width:700px){.lb .prev,.lb .next{font-size:34px;padding:10px}}
+[data-fr]{display:none}
+html[lang=fr] [data-fr]{display:revert}
+html[lang=fr] [data-en]{display:none}
+</style>
+</head>
+<body>
+
+<header id="top">
+ <div class="wrap nav">
+  <a class="logo" href="#">AZURA<small>MODELS</small></a>
+  <nav class="links">
+   <a href="#models"><span data-en>Models</span><span data-fr>Mannequins</span></a>
+   <a href="#services"><span data-en>Services</span><span data-fr>Services</span></a>
+   <a href="#offers"><span data-en>Offers</span><span data-fr>Offres</span></a>
+   <a href="#about"><span data-en>About</span><span data-fr>L'agence</span></a>
+   <a class="keep" href="#contact">Contact</a>
+   <button class="lang" id="lang" aria-label="Language">FR</button>
+  </nav>
+ </div>
+</header>
+
+<section class="hero" style="padding:0">
+ <div class="media">
+  <video src="video/sofia-monaco.mp4" poster="img/sofia-monaco-poster.webp" autoplay muted loop playsinline></video>
+ </div>
+ <div class="text">
+  <div class="eyebrow"><span data-en>AI model agency · French Riviera</span><span data-fr>Agence de mannequins IA · Côte d'Azur</span></div>
+  <h1 data-en>Your collection,<br><em>worn on the Riviera.</em></h1>
+  <h1 data-fr>Votre collection,<br><em>portée sur la Riviera.</em></h1>
+  <p data-en>Photos and short videos of your products, worn by our virtual models in dream locations — delivered in days, without a photoshoot.</p>
+  <p data-fr>Des photos et des vidéos courtes de vos produits, portés par nos mannequins virtuelles dans des décors de rêve — livrées en quelques jours, sans shooting.</p>
+  <div><a class="btn" href="#models"><span data-en>Discover our models</span><span data-fr>Découvrir nos mannequins</span></a></div>
+ </div>
+</section>
+
+<section id="models">
+ <div class="wrap">
+  <div class="head">
+   <h2 data-en>Our models</h2><h2 data-fr>Nos mannequins</h2>
+   <p data-en>Four faces, one standard: the same face in every image, real skin, real light. Click a model to open her book.</p>
+   <p data-fr>Quatre visages, une exigence : le même visage sur chaque image, une peau réelle, une vraie lumière. Cliquez sur une mannequin pour ouvrir son book.</p>
+  </div>
+  <div class="models">
+   <button class="model" data-book="sofia"><div class="ph"><img src="img/sofia-portrait.webp" alt="Sofia, AI model" loading="lazy"></div><h3>Sofia</h3><span data-en>Mediterranean · Muse &amp; creative director</span><span data-fr>Méditerranéenne · Égérie &amp; directrice artistique</span></button>
+   <button class="model" data-book="elin"><div class="ph"><img src="img/elin-portrait.webp" alt="Elin, AI model" loading="lazy"></div><h3>Elin</h3><span data-en>Scandinavian · Natural, sun-kissed</span><span data-fr>Scandinave · Naturelle, solaire</span></button>
+   <button class="model" data-book="amara"><div class="ph"><img src="img/amara-portrait.webp" alt="Amara, AI model" loading="lazy"></div><h3>Amara</h3><span data-en>West African · Regal, couture</span><span data-fr>Ouest-africaine · Allure couture</span></button>
+   <button class="model" data-book="mei"><div class="ph"><img src="img/mei-portrait.webp" alt="Mei, AI model" loading="lazy"></div><h3>Mei</h3><span data-en>East Asian · Cool, minimal</span><span data-fr>Asiatique · Chic minimaliste</span></button>
+  </div>
+ </div>
+</section>
+
+<div class="book" id="book" role="dialog" aria-modal="true">
+ <div class="inner">
+  <div class="top"><h3 id="bookName"></h3><button class="close" id="close">CLOSE ✕</button></div>
+  <div class="grid" id="bookGrid"></div>
+ </div>
+</div>
+
+<div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="Photo">
+ <button class="x" id="lbClose">✕</button>
+ <button class="prev" id="lbPrev" aria-label="Previous">‹</button>
+ <img id="lbImg" alt="">
+ <button class="next" id="lbNext" aria-label="Next">›</button>
+ <div class="count" id="lbCount"></div>
+</div>
+
+<section id="services" class="dark">
+ <div class="wrap">
+  <div class="head">
+   <h2 data-en>From your product<br>to the Riviera</h2><h2 data-fr>De votre produit<br>à la Riviera</h2>
+   <p data-en>You send us your product photos. We dress our models in your pieces — exactly as they are — and shoot them where your customers dream of being.</p>
+   <p data-fr>Vous nous envoyez vos photos produit. Nous habillons nos mannequins avec vos pièces — à l'identique — et les mettons en scène là où vos clientes rêvent d'être.</p>
+  </div>
+  <div class="cols">
+   <div><div class="n">01</div><h4 data-en>Your products</h4><h4 data-fr>Vos produits</h4><p data-en>Prints, cuts, colours and details reproduced faithfully from your packshots. No invented logo, no approximation.</p><p data-fr>Imprimés, coupes, couleurs et détails reproduits fidèlement à partir de vos photos produit. Aucun logo inventé, aucune approximation.</p></div>
+   <div><div class="n">02</div><h4 data-en>Dream locations</h4><h4 data-fr>Des décors de rêve</h4><p data-en>Yachts, palace terraces, Monaco, Saint-Tropez, Paris, hidden coves — any light, any season, no travel.</p><p data-fr>Yachts, terrasses de palace, Monaco, Saint-Tropez, Paris, criques secrètes — toutes les lumières, toutes les saisons, sans déplacement.</p></div>
+   <div><div class="n">03</div><h4 data-en>Photos &amp; short videos</h4><h4 data-fr>Photos &amp; vidéos courtes</h4><p data-en>Campaign images and vertical 8-second videos made for Reels and TikTok, in the "outfit of the day" style that performs.</p><p data-fr>Des images de campagne et des vidéos verticales de 8 secondes pour Reels et TikTok, au format « outfit of the day » qui performe.</p></div>
+  </div>
+  <div class="showcase">
+   <div>
+    <div class="eyebrow" style="color:#b9b0a4">OOTD · 8s · 9:16</div>
+    <h3 data-en>Content that feels filmed,<br>not generated.</h3><h3 data-fr>Des contenus qui semblent filmés,<br>pas générés.</h3>
+    <p data-en>Real skin, real movement, real streets with passers-by. Our models film themselves the way creators do — ready for your social feeds and ads.</p>
+    <p data-fr>Une peau réelle, un vrai mouvement, de vraies rues avec des passants. Nos mannequins se filment comme de vraies créatrices — prêtes pour vos réseaux et vos publicités.</p>
+    <a class="btn" href="#contact"><span data-en>Request a free test</span><span data-fr>Demander un test offert</span></a>
+   </div>
+   <video src="video/sofia-monaco.mp4" autoplay muted loop playsinline></video>
+  </div>
+ </div>
+</section>
+
+<section id="offers">
+ <div class="wrap">
+  <div class="head">
+   <h2 data-en>Offers</h2><h2 data-fr>Offres</h2>
+   <p data-en>Up to ten times less than a traditional photoshoot. Every project starts with 3 free test visuals of your own products.</p>
+   <p data-fr>Jusqu'à dix fois moins cher qu'un shooting classique. Chaque projet commence par 3 visuels test offerts avec vos propres produits.</p>
+  </div>
+  <div class="plans">
+   <div class="plan"><h4 data-en>Discovery</h4><h4 data-fr>Découverte</h4><div class="price" data-en>€890</div><div class="price" data-fr>890 €</div><div class="per" data-en>excl. VAT · one-off</div><div class="per" data-fr>HT · ponctuel</div>
+    <ul><li data-en>10 photos</li><li data-fr>10 photos</li><li data-en>3 vertical videos (8 s)</li><li data-fr>3 vidéos verticales (8 s)</li><li data-en>1 location of your choice</li><li data-fr>1 décor au choix</li><li data-en>Delivered in 5 days</li><li data-fr>Livré en 5 jours</li></ul>
+    <a class="btn dark" href="#contact"><span data-en>Start</span><span data-fr>Commencer</span></a></div>
+   <div class="plan feat"><h4 data-en>Collection</h4><h4 data-fr>Collection</h4><div class="price" data-en>€2,400</div><div class="price" data-fr>2 400 €</div><div class="per" data-en>excl. VAT · one-off</div><div class="per" data-fr>HT · ponctuel</div>
+    <ul><li data-en>30 photos</li><li data-fr>30 photos</li><li data-en>8 vertical videos (8 s)</li><li data-fr>8 vidéos verticales (8 s)</li><li data-en>3 locations (beach, yacht, city…)</li><li data-fr>3 décors (plage, yacht, ville…)</li><li data-en>Up to 2 models</li><li data-fr>Jusqu'à 2 mannequins</li></ul>
+    <a class="btn" href="#contact"><span data-en>Book a call</span><span data-fr>Réserver un appel</span></a></div>
+   <div class="plan"><h4 data-en>Monthly</h4><h4 data-fr>Abonnement</h4><div class="price" data-en>€1,500</div><div class="price" data-fr>1 500 €</div><div class="per" data-en>excl. VAT · per month</div><div class="per" data-fr>HT · par mois</div>
+    <ul><li data-en>20 photos every month</li><li data-fr>20 photos chaque mois</li><li data-en>6 vertical videos</li><li data-fr>6 vidéos verticales</li><li data-en>New locations each month</li><li data-fr>De nouveaux décors chaque mois</li><li data-en>Your dedicated model</li><li data-fr>Votre mannequin attitrée</li></ul>
+    <a class="btn dark" href="#contact"><span data-en>Talk to us</span><span data-fr>Nous écrire</span></a></div>
+  </div>
+ </div>
+</section>
+
+<section id="about" style="background:var(--sand)">
+ <div class="wrap about">
+  <img src="img/sofia-3.webp" alt="Sofia on the Croisette in Cannes" loading="lazy">
+  <div>
+   <div class="eyebrow" data-en>The agency</div><div class="eyebrow" data-fr>L'agence</div>
+   <h2 data-en>Born on the Riviera,<br>made for fashion brands.</h2><h2 data-fr>Née sur la Riviera,<br>pensée pour les marques de mode.</h2>
+   <p data-en>AZURA Models creates campaign images and social videos for swimwear, ready-to-wear and accessories brands. Our muse and creative director, Sofia, is herself a virtual model: she sets the tone of every shoot — natural, sunlit, elegant.</p>
+   <p data-fr>AZURA Models crée des images de campagne et des vidéos pour les réseaux sociaux des marques de maillots, de prêt-à-porter et d'accessoires. Notre égérie et directrice artistique, Sofia, est elle-même une mannequin virtuelle : elle donne le ton de chaque shooting — naturel, solaire, élégant.</p>
+   <p class="note" data-en>Full transparency: all AZURA models are virtual characters created with artificial intelligence. They are original faces and do not represent any real person. Our content is labelled accordingly.</p>
+   <p class="note" data-fr>Transparence totale : toutes les mannequins d'AZURA sont des personnages virtuels créés par intelligence artificielle. Ce sont des visages originaux qui ne représentent aucune personne réelle. Nos contenus sont signalés comme tels.</p>
+  </div>
+ </div>
+</section>
+
+<section id="contact" class="contact">
+ <div class="wrap">
+  <div class="eyebrow">Contact</div>
+  <h2 data-en>Let's dress our models<br>in your collection.</h2><h2 data-fr>Habillons nos mannequins<br>avec votre collection.</h2>
+  <p data-en>Send us 2 or 3 product photos: we'll send you back 3 free visuals of your pieces worn on the Riviera.</p>
+  <p data-fr>Envoyez-nous 2 ou 3 photos produit : nous vous renvoyons 3 visuels offerts de vos pièces portées sur la Riviera.</p>
+  <a class="mail" href="mailto:contact@sofia-azur.fr?subject=AZURA%20Models">contact@sofia-azur.fr</a>
+ </div>
+</section>
+
+<footer>
+ <div class="wrap">
+  <span>© 2026 AZURA Models — <span data-en>a brand of CCD HOLDING</span><span data-fr>une marque de CCD HOLDING</span></span>
+  <span><a href="mentions-legales.html"><span data-en>Legal notice</span><span data-fr>Mentions légales</span></a> · <span data-en>All models are AI-generated virtual characters.</span><span data-fr>Toutes nos mannequins sont des personnages virtuels générés par IA.</span></span>
+ </div>
+</footer>
+
+<script>
+const BOOKS={
+ sofia:{name:"Sofia",imgs:["sofia-portrait","sofia-1","sofia-2","sofia-3"],video:"video/sofia-monaco.mp4"},
+ elin:{name:"Elin",imgs:["elin-portrait","elin-1","elin-2","elin-3"]},
+ amara:{name:"Amara",imgs:["amara-portrait","amara-1","amara-2","amara-3"]},
+ mei:{name:"Mei",imgs:["mei-portrait","mei-1","mei-2","mei-3"]}
+};
+const book=document.getElementById('book'),grid=document.getElementById('bookGrid');
+document.querySelectorAll('[data-book]').forEach(b=>b.addEventListener('click',()=>{
+ const m=BOOKS[b.dataset.book];
+ document.getElementById('bookName').textContent=m.name;
+ grid.innerHTML=m.imgs.map(i=>`<img src="img/${i}.webp" alt="${m.name}" loading="lazy">`).join('')+(m.video?`<video src="${m.video}" autoplay muted loop playsinline></video>`:'');
+ book.classList.add('open');document.body.style.overflow='hidden';
+}));
+function closeBook(){book.classList.remove('open');document.body.style.overflow='';grid.innerHTML=''}
+document.getElementById('close').onclick=closeBook;
+book.addEventListener('click',e=>{if(e.target===book)closeBook()});
+
+const lb=document.getElementById('lb'),lbImg=document.getElementById('lbImg'),lbCount=document.getElementById('lbCount');
+let lbList=[],lbI=0;
+function lbShow(i){lbI=(i+lbList.length)%lbList.length;lbImg.src=lbList[lbI];lbCount.textContent=(lbI+1)+' / '+lbList.length}
+grid.addEventListener('click',e=>{if(e.target.tagName!=='IMG')return;lbList=[...grid.querySelectorAll('img')].map(i=>i.src);lbShow(lbList.indexOf(e.target.src));lb.classList.add('open')});
+function lbClose(){lb.classList.remove('open')}
+document.getElementById('lbClose').onclick=lbClose;
+document.getElementById('lbPrev').onclick=e=>{e.stopPropagation();lbShow(lbI-1)};
+document.getElementById('lbNext').onclick=e=>{e.stopPropagation();lbShow(lbI+1)};
+lb.addEventListener('click',e=>{if(e.target===lb)lbClose()});
+let tx=null;lb.addEventListener('touchstart',e=>{tx=e.touches[0].clientX},{passive:true});
+lb.addEventListener('touchend',e=>{if(tx===null)return;const d=e.changedTouches[0].clientX-tx;if(Math.abs(d)>40)lbShow(lbI+(d<0?1:-1));tx=null});
+document.addEventListener('keydown',e=>{if(lb.classList.contains('open')){if(e.key==='Escape')lbClose();if(e.key==='ArrowRight')lbShow(lbI+1);if(e.key==='ArrowLeft')lbShow(lbI-1);return}if(e.key==='Escape')closeBook()});
+const hdr=document.getElementById('top');
+addEventListener('scroll',()=>hdr.classList.toggle('solid',scrollY>40));
+const langBtn=document.getElementById('lang');
+function setLang(l){document.documentElement.lang=l;langBtn.textContent=l==='en'?'FR':'EN';try{localStorage.setItem('azura-lang',l)}catch(e){}}
+let saved='en';try{saved=localStorage.getItem('azura-lang')||(navigator.language.startsWith('fr')?'fr':'en')}catch(e){}
+setLang(saved);
+langBtn.onclick=()=>setLang(document.documentElement.lang==='en'?'fr':'en');
+</script>
+</body>
+</html>

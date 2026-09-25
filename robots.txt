@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://azura-models.com/sitemap.xml
