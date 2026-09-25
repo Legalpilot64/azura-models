@@ -7,7 +7,10 @@
 <meta name="description" content="AZURA Models is an AI model agency on the French Riviera. Photos and short videos of your products, worn by our virtual models, in dream locations — delivered in days, without a photoshoot.">
 <meta property="og:title" content="AZURA Models — AI Model Agency">
 <meta property="og:description" content="Your products, worn by our virtual models, in dream locations. Delivered in days.">
-<meta property="og:image" content="img/sofia-portrait.webp">
+<meta property="og:image" content="https://azura-models.com/img/logo/og-image-1200x630.png">
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="img/logo/favicon-32.png">
+<link rel="apple-touch-icon" href="img/logo/apple-touch-icon-180.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
@@ -28,13 +31,13 @@ header.solid{background:rgba(246,241,234,.94);backdrop-filter:blur(8px);border-b
 .nav{display:flex;align-items:center;justify-content:space-between;height:68px;position:relative}
 @media(min-width:1280px){.links{position:absolute;left:calc(50% + 32px);right:24px;justify-content:space-between}}
 @media(max-width:1279px){header:not(.solid){background:linear-gradient(180deg,rgba(17,17,17,.85),rgba(17,17,17,.55))}.links{gap:20px}}
-.logo{font-family:"Cormorant Garamond",serif;font-size:26px;letter-spacing:.28em;text-decoration:none}
+.logo{display:flex;align-items:center;text-decoration:none}.logo img{height:46px;width:auto;display:block}
 .logo small{font-family:Inter;font-size:10px;letter-spacing:.35em;margin-left:6px;opacity:.7}
 .links{display:flex;gap:28px;align-items:center;font-size:12px;letter-spacing:.18em;text-transform:uppercase}
 .links a{text-decoration:none;opacity:.85}.links a:hover{opacity:1}
 .lang{border:1px solid currentColor;background:none;padding:4px 10px;font:inherit;font-size:11px;letter-spacing:.15em;cursor:pointer;color:inherit}
 header:not(.solid){color:#fff}
-@media(max-width:760px){.links a:not(.keep){display:none}.links{gap:14px}.logo{font-size:22px}}
+@media(max-width:760px){.links a:not(.keep){display:none}.links{gap:14px}.logo img{height:38px}}
 /* hero */
 .hero{position:relative;height:100vh;min-height:620px;max-height:980px;display:grid;grid-template-columns:1fr 1fr;grid-template-rows:minmax(0,1fr);background:#111;color:#fff;overflow:hidden}
 .hero .media{position:relative;min-height:0;height:100%}
@@ -134,7 +137,7 @@ html[lang=fr] [data-en]{display:none}
 
 <header id="top">
  <div class="wrap nav">
-  <a class="logo" href="#">AZURA<small>MODELS</small></a>
+  <a class="logo" href="#" aria-label="AZURA Models"><img src="img/logo/azura-models-horizontal-blanc.svg" alt="AZURA Models" width="190" height="50"></a>
   <nav class="links">
    <a href="#models"><span data-en>Models</span><span data-fr>Mannequins</span></a>
    <a href="#services"><span data-en>Services</span><span data-fr>Services</span></a>
