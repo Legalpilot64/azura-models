@@ -294,6 +294,7 @@ html[lang=fr] [data-en]{display:none}
 </footer>
 
 <script>
+const ASSET_V="202609251044";
 const BOOKS={
  sofia:{name:"Sofia",imgs:["sofia-portrait","sofia-1","sofia-2","sofia-3","sofia-4","sofia-5","sofia-bijoux-cou","sofia-bijoux-mains","sofia-bijoux-montre","sofia-bijoux-oreille"],video:"../video/sofia-monaco.mp4"},
  elin:{name:"Elin",imgs:["elin-portrait","elin-1","elin-2","elin-3","elin-4","elin-5","elin-bijoux-cou","elin-bijoux-mains","elin-bijoux-montre","elin-bijoux-oreille"],video:"../video/elin-monaco.mp4"},
@@ -304,7 +305,7 @@ const book=document.getElementById('book'),grid=document.getElementById('bookGri
 document.querySelectorAll('[data-book]').forEach(b=>b.addEventListener('click',()=>{
  const m=BOOKS[b.dataset.book];
  document.getElementById('bookName').textContent=m.name;
- grid.innerHTML=m.imgs.map(i=>`<img src="../img/${i}.webp" alt="${m.name}" loading="lazy">`).join('')+(m.video?`<video src="${m.video}" autoplay muted loop playsinline></video>`:'');
+ grid.innerHTML=m.imgs.map(i=>`<img src="../img/${i}.webp?v=${ASSET_V}" alt="${m.name}" loading="lazy">`).join('')+(m.video?`<video src="${m.video}?v=${ASSET_V}" autoplay muted loop playsinline></video>`:'');
  book.classList.add('open');document.body.style.overflow='hidden';
 }));
 function closeBook(){book.classList.remove('open');document.body.style.overflow='';grid.innerHTML=''}
