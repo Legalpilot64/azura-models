@@ -27,7 +27,7 @@ t = t.replace('"url":"https://azura-models.com/",', '"url":"https://azura-models
 for attr in ("src", "href"):
     t = re.sub(rf'{attr}="(img/|video/|favicon\.ico|mentions-legales\.html)', rf'{attr}="../\1', t)
 t = t.replace('src="img/${i}.webp"', 'src="../img/${i}.webp"')
-t = re.sub(r"""(['"])(video/|img/)""", r"../", t)  # chemins dans le JavaScript (books, vidéos)
+t = re.sub(r"""(["'])(video/|img/)""", lambda m: m.group(1)+"../"+m.group(2), t)  # chemins dans le JavaScript (books, vidéos)
 # 3. bouton de langue → lien vers la version anglaise
 t = t.replace('<a class="lang" id="lang" href="/fr/" hreflang="fr" lang="fr" aria-label="Version française">FR</a>', '<a class="lang" id="lang" href="/" hreflang="en" lang="en" aria-label="English version">EN</a>')
 # 4. script de langue : figer le français, plus de détection automatique
