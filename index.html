@@ -3,10 +3,10 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>AZURA Models — AI Model Agency, French Riviera</title>
-<meta name="description" content="AZURA Models is an AI model agency on the French Riviera. Photos and short videos of your products, worn by our virtual models, in dream locations — delivered in days, without a photoshoot.">
+<title>AZURA Models — AI Model Agency, Anywhere in the World</title>
+<meta name="description" content="AZURA Models is an AI model agency born on the French Riviera. Photos and short videos of your products, worn by our virtual models anywhere in the world, in any season — delivered in days, without a photoshoot.">
 <meta property="og:title" content="AZURA Models — AI Model Agency">
-<meta property="og:description" content="Your products, worn by our virtual models, in dream locations. Delivered in days.">
+<meta property="og:description" content="Your products, worn by our virtual models anywhere in the world, in any season. Delivered in days.">
 <meta property="og:image" content="https://azura-models.com/img/logo/og-image-1200x630.png">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://azura-models.com/">
@@ -17,7 +17,7 @@
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="AZURA Models — AI Model Agency">
-<meta name="twitter:description" content="Your products, worn by our virtual models, in dream locations. Delivered in days.">
+<meta name="twitter:description" content="Your products, worn by our virtual models anywhere in the world, in any season. Delivered in days.">
 <meta name="twitter:image" content="https://azura-models.com/img/logo/og-image-1200x630.png">
 <meta name="theme-color" content="#1f4e5f">
 <link rel="canonical" href="https://azura-models.com/">
@@ -148,6 +148,15 @@ footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
 [data-fr]{display:none}
 html[lang=fr] [data-fr]{display:revert}
 html[lang=fr] [data-en]{display:none}
+.dests{display:grid;grid-template-columns:repeat(5,1fr);gap:14px}
+.dest{position:relative;aspect-ratio:4/5;overflow:hidden;background:var(--sand)}
+.dest img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .7s}
+.dest:hover img{transform:scale(1.04)}
+.dest .cap{position:absolute;left:0;right:0;bottom:0;padding:14px 14px 12px;background:linear-gradient(to top,rgba(0,0,0,.62),rgba(0,0,0,0));color:#fff}
+.dest .cap b{display:block;font-family:"Cormorant Garamond",serif;font-weight:400;font-size:22px;line-height:1.05}
+.dest .cap span{font-size:10px;letter-spacing:.18em;text-transform:uppercase;opacity:.85}
+@media(max-width:900px){.dests{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:560px){.dests{grid-template-columns:repeat(2,1fr);gap:10px}.dest .cap b{font-size:18px}}
 </style>
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"Organization","name":"AZURA Models","alternateName":"AZURA Models — AI model agency","url":"https://azura-models.com/","logo":"https://azura-models.com/img/logo/azura-models-logo-2000.png","image":"https://azura-models.com/img/logo/og-image-1200x630.png","description":"AI model agency on the French Riviera: photos and short videos of your products, worn by virtual models, delivered in days without a photoshoot.","email":"contact@azura-models.com","parentOrganization":{"@type":"Organization","name":"CCD HOLDING"},"areaServed":["FR","MC","IT","ES","GB","DE","BE","NL","CH"],"knowsLanguage":["en","fr"]}
@@ -160,6 +169,7 @@ html[lang=fr] [data-en]{display:none}
   <a class="logo" href="#" aria-label="AZURA Models"><img src="img/logo/azura-models-horizontal-blanc.svg" alt="AZURA Models" width="190" height="50"></a>
   <nav class="links">
    <a href="#models"><span data-en>Models</span><span data-fr>Mannequins</span></a>
+   <a href="#destinations"><span data-en>Destinations</span><span data-fr>Destinations</span></a>
    <a href="#services"><span data-en>Services</span><span data-fr>Services</span></a>
    <a href="#offers"><span data-en>Offers</span><span data-fr>Offres</span></a>
    <a href="#about"><span data-en>About</span><span data-fr>L'agence</span></a>
@@ -175,10 +185,10 @@ html[lang=fr] [data-en]{display:none}
  </div>
  <div class="text">
   <div class="eyebrow"><span data-en>AI model agency · French Riviera</span><span data-fr>Agence de mannequins IA · Côte d'Azur</span></div>
-  <h1 data-en>Your collection,<br><em>worn on the Riviera.</em></h1>
-  <h1 data-fr>Votre collection,<br><em>portée sur la Riviera.</em></h1>
-  <p data-en>Photos and short videos of your products, worn by our virtual models in dream locations — delivered in days, without a photoshoot.</p>
-  <p data-fr>Des photos et des vidéos courtes de vos produits, portés par nos mannequins virtuelles dans des décors de rêve — livrées en quelques jours, sans shooting.</p>
+  <h1 data-en>Your collection,<br><em>worn anywhere in the world.</em></h1>
+  <h1 data-fr>Votre collection,<br><em>portée partout dans le monde.</em></h1>
+  <p data-en>Tokyo on Monday, the Maldives on Tuesday, Paris under the snow on Wednesday. Photos and short videos of your products, worn by our virtual models in any city, any season — delivered in days. No travel, no photoshoot.</p>
+  <p data-fr>Tokyo lundi, les Maldives mardi, Paris sous la neige mercredi. Des photos et des vidéos courtes de vos produits, portés par nos mannequins virtuelles dans n'importe quelle ville, à n'importe quelle saison — livrées en quelques jours. Sans voyage, sans shooting.</p>
   <div><a class="btn" href="#models"><span data-en>Discover our models</span><span data-fr>Découvrir nos mannequins</span></a></div>
  </div>
 </section>
@@ -214,16 +224,37 @@ html[lang=fr] [data-en]{display:none}
  <div class="count" id="lbCount"></div>
 </div>
 
+<section id="destinations">
+ <div class="wrap">
+  <div class="head">
+   <h2 data-en>Anywhere,<br>at any time</h2><h2 data-fr>Partout,<br>à tout moment</h2>
+   <p data-en>Our studio never closes and never travels: every destination, every season, every light is a few days away. Ten of the places our models have already been.</p>
+   <p data-fr>Notre studio ne ferme jamais et ne prend pas l'avion : chaque destination, chaque saison, chaque lumière est à quelques jours. Dix des lieux où nos mannequins sont déjà allées.</p>
+  </div>
+  <div class="dests">
+   <figure class="dest"><img src="img/sofia-4.webp" alt="Monaco" loading="lazy"><figcaption class="cap"><b>Monaco</b><span data-en>Evening · delivered in 5 days</span><span data-fr>Soir · livré en 5 jours</span></figcaption></figure>
+   <figure class="dest"><img src="img/dest-new-york.webp" alt="New York" loading="lazy"><figcaption class="cap"><b>New York</b><span data-en>Winter · snow</span><span data-fr>Hiver · neige</span></figcaption></figure>
+   <figure class="dest"><img src="img/dest-tokyo.webp" alt="Tokyo" loading="lazy"><figcaption class="cap"><b>Tokyo</b><span data-en>Night · neon</span><span data-fr>Nuit · néons</span></figcaption></figure>
+   <figure class="dest"><img src="img/dest-maldives.webp" alt="Maldives" loading="lazy"><figcaption class="cap"><b>Maldives</b><span data-en>Swimwear in January</span><span data-fr>Maillots en janvier</span></figcaption></figure>
+   <figure class="dest"><img src="img/mei-5.webp" alt="Paris" loading="lazy"><figcaption class="cap"><b>Paris</b><span data-en>Autumn · overcast</span><span data-fr>Automne · ciel voilé</span></figcaption></figure>
+   <figure class="dest"><img src="img/dest-dubai.webp" alt="Dubai" loading="lazy"><figcaption class="cap"><b>Dubai</b><span data-en>Sunset · rooftop</span><span data-fr>Coucher de soleil · rooftop</span></figcaption></figure>
+   <figure class="dest"><img src="img/dest-alpes.webp" alt="Swiss Alps" loading="lazy"><figcaption class="cap"><b>Swiss Alps</b><span data-en>Ski season · full sun</span><span data-fr>Saison de ski · plein soleil</span></figcaption></figure>
+   <figure class="dest"><img src="img/dest-marrakech.webp" alt="Marrakech" loading="lazy"><figcaption class="cap"><b>Marrakech</b><span data-en>Riad · golden hour</span><span data-fr>Riad · lumière dorée</span></figcaption></figure>
+   <figure class="dest"><img src="img/elin-4.webp" alt="Portofino" loading="lazy"><figcaption class="cap"><b>Portofino</b><span data-en>Summer · harbour</span><span data-fr>Été · port</span></figcaption></figure>
+   <figure class="dest"><img src="img/dest-bali.webp" alt="Bali" loading="lazy"><figcaption class="cap"><b>Bali</b><span data-en>Villa · morning light</span><span data-fr>Villa · lumière du matin</span></figcaption></figure>
+  </div>
+ </div>
+</section>
 <section id="services" class="dark">
  <div class="wrap">
   <div class="head">
-   <h2 data-en>From your product<br>to the Riviera</h2><h2 data-fr>De votre produit<br>à la Riviera</h2>
+   <h2 data-en>From your product<br>to anywhere in the world</h2><h2 data-fr>De votre produit<br>au monde entier</h2>
    <p data-en>You send us your product photos. We dress our models in your pieces — exactly as they are — and shoot them where your customers dream of being.</p>
    <p data-fr>Vous nous envoyez vos photos produit. Nous habillons nos mannequins avec vos pièces — à l'identique — et les mettons en scène là où vos clientes rêvent d'être.</p>
   </div>
   <div class="cols">
    <div><div class="n">01</div><h4 data-en>Your products</h4><h4 data-fr>Vos produits</h4><p data-en>Prints, cuts, colours and details reproduced faithfully from your packshots. No invented logo, no approximation.</p><p data-fr>Imprimés, coupes, couleurs et détails reproduits fidèlement à partir de vos photos produit. Aucun logo inventé, aucune approximation.</p></div>
-   <div><div class="n">02</div><h4 data-en>Dream locations</h4><h4 data-fr>Des décors de rêve</h4><p data-en>Yachts, palace terraces, Monaco, Saint-Tropez, Paris, hidden coves — any light, any season, no travel.</p><p data-fr>Yachts, terrasses de palace, Monaco, Saint-Tropez, Paris, criques secrètes — toutes les lumières, toutes les saisons, sans déplacement.</p></div>
+   <div><div class="n">02</div><h4 data-en>Anywhere, anytime</h4><h4 data-fr>N'importe où, n'importe quand</h4><p data-en>Monaco, New York, Tokyo, the Maldives, the Alps — and out of season too: a swimsuit in January, a coat in July, a cruise collection in December. No travel, no weather risk.</p><p data-fr>Monaco, New York, Tokyo, les Maldives, les Alpes — et à contre-saison : un maillot en janvier, un manteau en juillet, une collection croisière en décembre. Sans voyage, sans risque météo.</p></div>
    <div><div class="n">03</div><h4 data-en>Photos &amp; short videos</h4><h4 data-fr>Photos &amp; vidéos courtes</h4><p data-en>Campaign images and vertical 8-second videos made for Reels and TikTok, in the "outfit of the day" style that performs.</p><p data-fr>Des images de campagne et des vidéos verticales de 8 secondes pour Reels et TikTok, au format « outfit of the day » qui performe.</p></div>
   </div>
   <div class="showcase">
@@ -248,13 +279,13 @@ html[lang=fr] [data-en]{display:none}
   </div>
   <div class="plans">
    <div class="plan"><h4 data-en>Discovery</h4><h4 data-fr>Découverte</h4><div class="price" data-en>€890</div><div class="price" data-fr>890 €</div><div class="per" data-en>excl. VAT · one-off</div><div class="per" data-fr>HT · ponctuel</div>
-    <ul><li data-en>10 photos</li><li data-fr>10 photos</li><li data-en>3 vertical videos (8 s)</li><li data-fr>3 vidéos verticales (8 s)</li><li data-en>1 location of your choice</li><li data-fr>1 décor au choix</li><li data-en>Delivered in 5 days</li><li data-fr>Livré en 5 jours</li></ul>
+    <ul><li data-en>10 photos</li><li data-fr>10 photos</li><li data-en>3 vertical videos (8 s)</li><li data-fr>3 vidéos verticales (8 s)</li><li data-en>1 destination of your choice</li><li data-fr>1 destination au choix</li><li data-en>Delivered in 5 days</li><li data-fr>Livré en 5 jours</li></ul>
     <a class="btn dark" href="#contact"><span data-en>Start</span><span data-fr>Commencer</span></a></div>
    <div class="plan feat"><h4 data-en>Collection</h4><h4 data-fr>Collection</h4><div class="price" data-en>€2,400</div><div class="price" data-fr>2 400 €</div><div class="per" data-en>excl. VAT · one-off</div><div class="per" data-fr>HT · ponctuel</div>
-    <ul><li data-en>30 photos</li><li data-fr>30 photos</li><li data-en>8 vertical videos (8 s)</li><li data-fr>8 vidéos verticales (8 s)</li><li data-en>3 locations (beach, yacht, city…)</li><li data-fr>3 décors (plage, yacht, ville…)</li><li data-en>Up to 2 models</li><li data-fr>Jusqu'à 2 mannequins</li></ul>
+    <ul><li data-en>30 photos</li><li data-fr>30 photos</li><li data-en>8 vertical videos (8 s)</li><li data-fr>8 vidéos verticales (8 s)</li><li data-en>3 destinations, on 3 continents if you like</li><li data-fr>3 destinations, sur 3 continents si vous voulez</li><li data-en>Up to 2 models</li><li data-fr>Jusqu'à 2 mannequins</li></ul>
     <a class="btn" href="#contact"><span data-en>Book a call</span><span data-fr>Réserver un appel</span></a></div>
    <div class="plan"><h4 data-en>Monthly</h4><h4 data-fr>Abonnement</h4><div class="price" data-en>€1,500</div><div class="price" data-fr>1 500 €</div><div class="per" data-en>excl. VAT · per month</div><div class="per" data-fr>HT · par mois</div>
-    <ul><li data-en>20 photos every month</li><li data-fr>20 photos chaque mois</li><li data-en>6 vertical videos</li><li data-fr>6 vidéos verticales</li><li data-en>New locations each month</li><li data-fr>De nouveaux décors chaque mois</li><li data-en>Your dedicated model</li><li data-fr>Votre mannequin attitrée</li></ul>
+    <ul><li data-en>20 photos every month</li><li data-fr>20 photos chaque mois</li><li data-en>6 vertical videos</li><li data-fr>6 vidéos verticales</li><li data-en>A new destination every month, following your collections</li><li data-fr>Une nouvelle destination chaque mois, au rythme de vos collections</li><li data-en>Your dedicated model</li><li data-fr>Votre mannequin attitrée</li></ul>
     <a class="btn dark" href="#contact"><span data-en>Talk to us</span><span data-fr>Nous écrire</span></a></div>
   </div>
  </div>
@@ -266,8 +297,8 @@ html[lang=fr] [data-en]{display:none}
   <div>
    <div class="eyebrow" data-en>The agency</div><div class="eyebrow" data-fr>L'agence</div>
    <h2 data-en>Born on the Riviera,<br>made for fashion brands.</h2><h2 data-fr>Née sur la Riviera,<br>pensée pour les marques de mode.</h2>
-   <p data-en>AZURA Models creates campaign images and social videos for swimwear, ready-to-wear and accessories brands. Our muse and creative director, Sofia, is herself a virtual model: she sets the tone of every shoot — natural, sunlit, elegant.</p>
-   <p data-fr>AZURA Models crée des images de campagne et des vidéos pour les réseaux sociaux des marques de maillots, de prêt-à-porter et d'accessoires. Notre égérie et directrice artistique, Sofia, est elle-même une mannequin virtuelle : elle donne le ton de chaque shooting — naturel, solaire, élégant.</p>
+   <p data-en>AZURA Models creates campaign images and social videos for swimwear, ready-to-wear and accessories brands. Our muse and creative director, Sofia, is herself a virtual model: our studio is virtual: it opens wherever your customers dream of being. She sets the tone of every shoot — natural, sunlit, elegant.</p>
+   <p data-fr>AZURA Models crée des images de campagne et des vidéos pour les réseaux sociaux des marques de maillots, de prêt-à-porter et d'accessoires. Notre égérie et directrice artistique, Sofia, est elle-même une mannequin virtuelle : notre studio est virtuel : il ouvre là où vos clientes rêvent d'être. Elle donne le ton de chaque shooting — naturel, solaire, élégant.</p>
    <p class="note" data-en>Full transparency: all AZURA models are virtual characters created with artificial intelligence. They are original faces and do not represent any real person. Our content is labelled accordingly.</p>
    <p class="note" data-fr>Transparence totale : toutes les mannequins d'AZURA sont des personnages virtuels créés par intelligence artificielle. Ce sont des visages originaux qui ne représentent aucune personne réelle. Nos contenus sont signalés comme tels.</p>
   </div>
@@ -278,8 +309,8 @@ html[lang=fr] [data-en]{display:none}
  <div class="wrap">
   <div class="eyebrow">Contact</div>
   <h2 data-en>Let's dress our models<br>in your collection.</h2><h2 data-fr>Habillons nos mannequins<br>avec votre collection.</h2>
-  <p data-en>Send us 2 or 3 product photos: we'll send you back 3 free visuals of your pieces worn on the Riviera.</p>
-  <p data-fr>Envoyez-nous 2 ou 3 photos produit : nous vous renvoyons 3 visuels offerts de vos pièces portées sur la Riviera.</p>
+  <p data-en>Send us 2 or 3 product photos: we'll send you back 3 free visuals of your pieces worn wherever you want.</p>
+  <p data-fr>Envoyez-nous 2 ou 3 photos produit : nous vous renvoyons 3 visuels offerts de vos pièces portées là où vous voulez.</p>
   <a class="mail" href="mailto:contact@azura-models.com?subject=AZURA%20Models">contact@azura-models.com</a>
  </div>
 </section>
@@ -292,12 +323,12 @@ html[lang=fr] [data-en]{display:none}
 </footer>
 
 <script>
-const ASSET_V="202609251048";
+const ASSET_V="202609251100";
 const BOOKS={
- sofia:{name:"Sofia",imgs:["sofia-portrait","sofia-1","sofia-bijoux-cou","sofia-2","sofia-3","sofia-bijoux-mains","sofia-4","sofia-bijoux-montre","sofia-5","sofia-bijoux-oreille"],video:"video/sofia-monaco.mp4"},
- elin:{name:"Elin",imgs:["elin-portrait","elin-1","elin-bijoux-cou","elin-2","elin-3","elin-bijoux-mains","elin-4","elin-bijoux-montre","elin-5","elin-bijoux-oreille"],video:"video/elin-monaco.mp4"},
- amara:{name:"Amara",imgs:["amara-portrait","amara-1","amara-bijoux-cou","amara-2","amara-3","amara-bijoux-mains","amara-4","amara-bijoux-montre","amara-5","amara-bijoux-oreille"],video:"video/amara-cannes.mp4"},
- mei:{name:"Mei",imgs:["mei-portrait","mei-1","mei-bijoux-cou","mei-2","mei-3","mei-bijoux-mains","mei-4","mei-bijoux-montre","mei-5","mei-bijoux-oreille"],video:"video/mei-monaco.mp4"}
+ sofia:{name:"Sofia",imgs:["sofia-portrait","sofia-1","sofia-bijoux-cou","sofia-2","sofia-3","sofia-bijoux-mains","sofia-4","sofia-bijoux-montre","sofia-5","sofia-bijoux-oreille","sofia-maldives"],video:"video/sofia-monaco.mp4"},
+ elin:{name:"Elin",imgs:["elin-portrait","elin-1","elin-bijoux-cou","elin-2","elin-3","elin-bijoux-mains","elin-4","elin-bijoux-montre","elin-5","elin-bijoux-oreille","elin-ny","elin-alpes"],video:"video/elin-monaco.mp4"},
+ amara:{name:"Amara",imgs:["amara-portrait","amara-1","amara-bijoux-cou","amara-2","amara-3","amara-bijoux-mains","amara-4","amara-bijoux-montre","amara-5","amara-bijoux-oreille","amara-dubai","amara-marrakech"],video:"video/amara-cannes.mp4"},
+ mei:{name:"Mei",imgs:["mei-portrait","mei-1","mei-bijoux-cou","mei-2","mei-3","mei-bijoux-mains","mei-4","mei-bijoux-montre","mei-5","mei-bijoux-oreille","mei-tokyo","mei-bali"],video:"video/mei-monaco.mp4"}
 };
 const book=document.getElementById('book'),grid=document.getElementById('bookGrid');
 document.querySelectorAll('[data-book]').forEach(b=>b.addEventListener('click',()=>{
