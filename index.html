@@ -45,6 +45,7 @@ a{color:inherit}
 /* nav */
 header{position:fixed;inset:0 0 auto;z-index:20;transition:background .3s}
 header.solid{background:rgba(246,241,234,.94);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.logo .logo-dark{display:none}header.solid .logo .logo-light{display:none}header.solid .logo .logo-dark{display:block}
 .nav{display:flex;align-items:center;justify-content:space-between;height:68px;position:relative}
 @media(min-width:1280px){.links{position:absolute;left:calc(50% + 32px);right:24px;justify-content:space-between}}
 @media(max-width:1279px){header:not(.solid){background:linear-gradient(180deg,rgba(17,17,17,.85),rgba(17,17,17,.55))}.links{gap:20px}}
@@ -167,7 +168,7 @@ html[lang=fr] [data-en]{display:none}
 
 <header id="top">
  <div class="wrap nav">
-  <a class="logo" href="#" aria-label="AZURA Models"><img src="img/logo/azura-models-horizontal-blanc.svg" alt="AZURA Models" width="190" height="50"></a>
+  <a class="logo" href="#" aria-label="AZURA Models"><img class="logo-light" src="img/logo/azura-models-horizontal-blanc.svg" alt="AZURA Models" width="190" height="50"><img class="logo-dark" src="img/logo/azura-models-horizontal.svg" alt="" width="190" height="50"></a>
   <nav class="links">
    <a href="#models"><span data-en>Models</span><span data-fr>Mannequins</span></a>
    <a href="#destinations"><span data-en>Destinations</span><span data-fr>Destinations</span></a>
@@ -327,7 +328,7 @@ html[lang=fr] [data-en]{display:none}
 </footer>
 
 <script>
-const ASSET_V="202609252132";
+const ASSET_V="202609252134";
 const BOOKS={
  sofia:{name:"Sofia",imgs:["sofia-portrait","sofia-1","sofia-bijoux-cou","sofia-2","sofia-3","sofia-bijoux-mains","sofia-4","sofia-bijoux-montre","sofia-5","sofia-bijoux-oreille","sofia-maldives"],video:"video/sofia-monaco.mp4"},
  elin:{name:"Elin",imgs:["elin-portrait","elin-1","elin-bijoux-cou","elin-2","elin-3","elin-bijoux-mains","elin-4","elin-bijoux-montre","elin-5","elin-bijoux-oreille","elin-ny","elin-alpes"],video:"video/elin-monaco.mp4"},
