@@ -77,14 +77,15 @@ section{padding:120px 0}
 .head h2{font-family:"Cormorant Garamond",serif;font-weight:400;font-size:clamp(36px,4.4vw,58px);line-height:1.05}
 .head p{max-width:420px;color:var(--muted)}
 /* models */
-.models{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.models{display:grid;grid-template-columns:repeat(5,1fr);gap:18px}
 .model{cursor:pointer;text-align:left;background:none;border:0;padding:0;font:inherit;color:inherit;display:flex;flex-direction:column;justify-content:flex-start;align-self:start}
 .model .ph{aspect-ratio:3/4;overflow:hidden;background:var(--sand)}
 .model img{width:100%;height:100%;object-fit:cover;transition:transform .7s}
 .model:hover img{transform:scale(1.04)}
 .model h3{font-family:"Cormorant Garamond",serif;font-weight:400;font-size:30px;margin-top:14px}
 .model span{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
-@media(max-width:900px){.models{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:1100px){.models{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:700px){.models{grid-template-columns:repeat(2,1fr)}}
 /* book modal */
 .book{position:fixed;inset:0;z-index:50;background:rgba(20,20,20,.96);color:#fff;display:none;overflow:auto}
 .book.open{display:block}
@@ -199,14 +200,15 @@ html[lang=fr] [data-en]{display:none}
  <div class="wrap">
   <div class="head">
    <h2 data-en>Our models</h2><h2 data-fr>Nos mannequins</h2>
-   <p data-en>Four faces, one standard: the same face in every image, real skin, real light. Click a model to open her book.</p>
-   <p data-fr>Quatre visages, une exigence : le même visage sur chaque image, une peau réelle, une vraie lumière. Cliquez sur une mannequin pour ouvrir son book.</p>
+   <p data-en>Five faces, one standard: the same face in every image, real skin, real light. Click a model to open her book.</p>
+   <p data-fr>Cinq visages, une exigence : le même visage sur chaque image, une peau réelle, une vraie lumière. Cliquez sur une mannequin pour ouvrir son book.</p>
   </div>
   <div class="models">
    <button class="model" data-book="sofia"><div class="ph"><img src="../img/sofia-portrait.webp" alt="Sofia, AI model" loading="lazy"></div><h3>Sofia</h3><span data-en>Mediterranean · Muse &amp; creative director</span><span data-fr>Méditerranéenne · Égérie &amp; directrice artistique</span></button>
    <button class="model" data-book="elin"><div class="ph"><img src="../img/elin-portrait.webp" alt="Elin, AI model" loading="lazy"></div><h3>Elin</h3><span data-en>Scandinavian · Natural, sun-kissed</span><span data-fr>Scandinave · Naturelle, solaire</span></button>
    <button class="model" data-book="amara"><div class="ph"><img src="../img/amara-portrait.webp" alt="Amara, AI model" loading="lazy"></div><h3>Amara</h3><span data-en>West African · Regal, couture</span><span data-fr>Ouest-africaine · Allure couture</span></button>
    <button class="model" data-book="mei"><div class="ph"><img src="../img/mei-portrait.webp" alt="Mei, AI model" loading="lazy"></div><h3>Mei</h3><span data-en>East Asian · Cool, minimal</span><span data-fr>Asiatique · Chic minimaliste</span></button>
+   <button class="model" data-book="noor"><div class="ph"><img src="../img/noor-portrait.webp" alt="Noor, AI model" loading="lazy"></div><h3>Noor</h3><span data-en>Khaleeji · Modest luxury, jewellery</span><span data-fr>Khaleejie · Luxe modeste, joaillerie</span></button>
   </div>
  </div>
 </section>
@@ -325,12 +327,13 @@ html[lang=fr] [data-en]{display:none}
 </footer>
 
 <script>
-const ASSET_V="202609251100";
+const ASSET_V="202609252053";
 const BOOKS={
  sofia:{name:"Sofia",imgs:["sofia-portrait","sofia-1","sofia-bijoux-cou","sofia-2","sofia-3","sofia-bijoux-mains","sofia-4","sofia-bijoux-montre","sofia-5","sofia-bijoux-oreille","sofia-maldives"],video:"../video/sofia-monaco.mp4"},
  elin:{name:"Elin",imgs:["elin-portrait","elin-1","elin-bijoux-cou","elin-2","elin-3","elin-bijoux-mains","elin-4","elin-bijoux-montre","elin-5","elin-bijoux-oreille","elin-ny","elin-alpes"],video:"../video/elin-monaco.mp4"},
  amara:{name:"Amara",imgs:["amara-portrait","amara-1","amara-bijoux-cou","amara-2","amara-3","amara-bijoux-mains","amara-4","amara-bijoux-montre","amara-5","amara-bijoux-oreille","amara-dubai","amara-marrakech"],video:"../video/amara-cannes.mp4"},
- mei:{name:"Mei",imgs:["mei-portrait","mei-1","mei-bijoux-cou","mei-2","mei-3","mei-bijoux-mains","mei-4","mei-bijoux-montre","mei-5","mei-bijoux-oreille","mei-tokyo","mei-bali"],video:"../video/mei-monaco.mp4"}
+ mei:{name:"Mei",imgs:["mei-portrait","mei-1","mei-bijoux-cou","mei-2","mei-3","mei-bijoux-mains","mei-4","mei-bijoux-montre","mei-5","mei-bijoux-oreille","mei-tokyo","mei-bali"],video:"../video/mei-monaco.mp4"},
+ noor:{name:"Noor",imgs:["noor-portrait","noor-1","noor-bijoux-cou","noor-2","noor-3","noor-bijoux-mains","noor-4","noor-bijoux-montre","noor-5","noor-bijoux-oreille"]}
 };
 const book=document.getElementById('book'),grid=document.getElementById('bookGrid');
 document.querySelectorAll('[data-book]').forEach(b=>b.addEventListener('click',()=>{
