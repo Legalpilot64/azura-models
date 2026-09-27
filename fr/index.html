@@ -161,6 +161,7 @@ html[lang=fr] [data-en]{display:none}
 .dest .cap span{font-size:10px;letter-spacing:.18em;text-transform:uppercase;opacity:.85}
 @media(max-width:900px){.dests{grid-template-columns:repeat(3,1fr)}}
 @media(max-width:560px){.dests{grid-template-columns:repeat(2,1fr);gap:10px}.dest .cap b{font-size:18px}}
+video::-webkit-media-controls-start-playback-button{display:none!important;-webkit-appearance:none}video::-webkit-media-controls{display:none!important}
 </style>
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"Organization","name":"AZURA Models","alternateName":"AZURA Models — AI model agency","url":"https://azura-models.com/fr/","logo":"https://azura-models.com/img/logo/azura-models-logo-2000.png","image":"https://azura-models.com/img/logo/og-image-1200x630.png","description":"Agence de mannequins IA sur la Côte d'Azur : photos et vidéos courtes de vos produits, portés par des mannequins virtuelles, livrées en quelques jours sans shooting.","email":"contact@azura-models.com","parentOrganization":{"@type":"Organization","name":"CCD HOLDING"},"areaServed":["FR","MC","IT","ES","GB","DE","BE","NL","CH"],"knowsLanguage":["en","fr"]}
@@ -335,7 +336,7 @@ html[lang=fr] [data-en]{display:none}
 </footer>
 
 <script>
-const ASSET_V="202609270048";
+const ASSET_V="202609270050";
 const BOOKS={
  sofia:{name:"Sofia",imgs:["sofia-portrait","sofia-1","sofia-bijoux-cou","sofia-2","sofia-3","sofia-bijoux-mains","sofia-4","sofia-bijoux-montre","sofia-5","sofia-bijoux-oreille","sofia-maldives","sofia-heliport"],video:"../video/sofia-monaco.mp4"},
  elin:{name:"Elin",imgs:["elin-portrait","elin-1","elin-bijoux-cou","elin-2","elin-3","elin-bijoux-mains","elin-4","elin-bijoux-montre","elin-5","elin-bijoux-oreille","elin-ny","elin-alpes"],video:"../video/elin-monaco.mp4"},
@@ -371,6 +372,12 @@ document.addEventListener('keydown',e=>{if(lb.classList.contains('open')){if(e.k
 const hdr=document.getElementById('top');
 addEventListener('scroll',()=>hdr.classList.toggle('solid',scrollY>40));
 document.documentElement.lang='fr';
+
+/* Mobiles en économie d'énergie : l'autoplay est bloqué → on relance à la première interaction */
+(function(){const go=()=>document.querySelectorAll('video[autoplay]').forEach(v=>{v.muted=true;const p=v.play();if(p&&p.catch)p.catch(()=>{});});
+go();['touchstart','touchend','scroll','click','keydown'].forEach(ev=>window.addEventListener(ev,go,{passive:true,once:true}));
+document.addEventListener('visibilitychange',()=>{if(!document.hidden)go();});
+if('IntersectionObserver' in window){const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){const p=e.target.play();if(p&&p.catch)p.catch(()=>{});}}));document.querySelectorAll('video[autoplay]').forEach(v=>io.observe(v));}})();
 </script>
 </body>
 </html>
