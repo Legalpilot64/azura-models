@@ -160,6 +160,7 @@ html[lang=fr] [data-en]{display:none}
 @media(max-width:900px){.dests{grid-template-columns:repeat(3,1fr)}}
 @media(max-width:560px){.dests{grid-template-columns:repeat(2,1fr);gap:10px}.dest .cap b{font-size:18px}}
 video::-webkit-media-controls-start-playback-button{display:none!important;-webkit-appearance:none}video::-webkit-media-controls{display:none!important}
+section[id]{scroll-margin-top:68px}
 </style>
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"Organization","name":"AZURA Models","alternateName":"AZURA Models — AI model agency","url":"https://azura-models.com/","logo":"https://azura-models.com/img/logo/azura-models-logo-2000.png","image":"https://azura-models.com/img/logo/og-image-1200x630.png","description":"AI model agency on the French Riviera: photos and short videos of your products, worn by virtual models, delivered in days without a photoshoot.","email":"contact@azura-models.com","parentOrganization":{"@type":"Organization","name":"CCD HOLDING"},"areaServed":["FR","MC","IT","ES","GB","DE","BE","NL","CH"],"knowsLanguage":["en","fr"]}
@@ -334,7 +335,7 @@ video::-webkit-media-controls-start-playback-button{display:none!important;-webk
 </footer>
 
 <script>
-const ASSET_V="202609270050";
+const ASSET_V="202609270057";
 const BOOKS={
  sofia:{name:"Sofia",imgs:["sofia-portrait","sofia-1","sofia-bijoux-cou","sofia-2","sofia-3","sofia-bijoux-mains","sofia-4","sofia-bijoux-montre","sofia-5","sofia-bijoux-oreille","sofia-maldives","sofia-heliport"],video:"video/sofia-monaco.mp4"},
  elin:{name:"Elin",imgs:["elin-portrait","elin-1","elin-bijoux-cou","elin-2","elin-3","elin-bijoux-mains","elin-4","elin-bijoux-montre","elin-5","elin-bijoux-oreille","elin-ny","elin-alpes"],video:"video/elin-monaco.mp4"},
@@ -376,6 +377,13 @@ document.documentElement.lang='en';
 go();['touchstart','touchend','scroll','click','keydown'].forEach(ev=>window.addEventListener(ev,go,{passive:true,once:true}));
 document.addEventListener('visibilitychange',()=>{if(!document.hidden)go();});
 if('IntersectionObserver' in window){const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){const p=e.target.play();if(p&&p.catch)p.catch(()=>{});}}));document.querySelectorAll('video[autoplay]').forEach(v=>io.observe(v));}})();
+
+/* Actualisation = retour en haut ; liens internes sans #ancre dans l'adresse */
+(function(){try{history.scrollRestoration='manual';}catch(e){}
+const nav=performance.getEntriesByType&&performance.getEntriesByType('navigation')[0];
+if((nav&&nav.type==='reload')||(location.hash&&!document.querySelector(location.hash.replace(/[^#\w-]/g,'')))){history.replaceState(null,'',location.pathname+location.search);window.scrollTo(0,0);addEventListener('load',()=>window.scrollTo(0,0));}
+document.addEventListener('click',e=>{const a=e.target.closest('a[href^="#"]');if(!a)return;const id=a.getAttribute('href');e.preventDefault();
+if(id==='#'){window.scrollTo({top:0,behavior:'smooth'});return;}const el=document.querySelector(id);if(el)el.scrollIntoView({behavior:'smooth',block:'start'});history.replaceState(null,'',location.pathname+location.search);});})();
 </script>
 </body>
 </html>
