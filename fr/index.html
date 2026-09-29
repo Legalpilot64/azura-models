@@ -113,17 +113,17 @@ section{padding:120px 0}
 .showcase p{color:#b9b0a4;max-width:460px}
 @media(max-width:860px){.showcase{grid-template-columns:1fr}.showcase video{margin:0 auto}}
 /* pricing */
-.plans{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
-.plan{border:1px solid var(--line);padding:40px 32px;background:#fbf8f3;display:flex;flex-direction:column}
+.plans{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.plan{border:1px solid var(--line);padding:36px 26px;background:#fbf8f3;display:flex;flex-direction:column}
 .plan.feat{background:var(--ink);color:var(--cream);border-color:var(--ink)}
-.plan h4{font-size:12px;letter-spacing:.3em;text-transform:uppercase}
-.plan .price{font-family:"Cormorant Garamond",serif;font-size:54px;margin:18px 0 4px}
+.plan h4{font-size:12px;letter-spacing:.3em;text-transform:uppercase;line-height:1.6;min-height:3.2em}
+.plan .price{font-family:"Cormorant Garamond",serif;font-size:48px;margin:18px 0 4px}
 .plan .per{font-size:13px;color:var(--muted)}.plan.feat .per{color:#b9b0a4}
 .plan ul{list-style:none;margin:26px 0 30px;font-size:15px}
 .plan li{padding:9px 0;border-top:1px solid var(--line)}.plan.feat li{border-color:#333}
 .plan .btn{margin-top:auto;text-align:center}
 .plan.feat .btn:hover{background:var(--cream);color:var(--ink)}
-@media(max-width:860px){.plans{grid-template-columns:1fr}}
+@media(max-width:1100px){.plans{grid-template-columns:repeat(2,1fr)}} @media(max-width:700px){.plans{grid-template-columns:1fr}}
 /* about */
 .about{display:grid;grid-template-columns:.8fr 1.2fr;gap:70px;align-items:center}
 .about img{aspect-ratio:4/5;object-fit:cover;width:100%}
@@ -288,18 +288,21 @@ section[id]{scroll-margin-top:68px}
  <div class="wrap">
   <div class="head">
    <h2 data-en>Offers</h2><h2 data-fr>Offres</h2>
-   <p data-en>Up to ten times less than a traditional photoshoot. Every project starts with 3 free test visuals of your own products.</p>
-   <p data-fr>Jusqu'à dix fois moins cher qu'un shooting classique. Chaque projet commence par 3 visuels test offerts avec vos propres produits.</p>
+   <p data-en>Up to ten times less than a traditional shoot. Every project starts with one of your products shot for free: its 4 views on a white background and one visual in the setting of your choice. These packages are a starting point: we're happy to build a tailored agreement (volume, several collections, a year-round calendar).</p>
+   <p data-fr>Jusqu'à dix fois moins cher qu'un shooting classique. Chaque projet commence par un de vos produits mis en images gratuitement : ses 4 vues sur fond blanc et un visuel dans le décor de votre choix. Ces formules sont une base : nous construisons volontiers un accord sur mesure (volume, plusieurs collections, calendrier à l'année).</p>
   </div>
   <div class="plans">
-   <div class="plan"><h4 data-en>Discovery</h4><h4 data-fr>Découverte</h4><div class="price" data-en>€890</div><div class="price" data-fr>890 €</div><div class="per" data-en>excl. VAT · one-off</div><div class="per" data-fr>HT · ponctuel</div>
+   <div class="plan feat"><h4 data-en>Product pages</h4><h4 data-fr>Fiches produit</h4><div class="price" data-en>€49</div><div class="price" data-fr>49 €</div><div class="per" data-en>excl. VAT · per product</div><div class="per" data-fr>HT · par produit</div>
+    <ul><li data-en>4 views on a white background: front, back, side, detail</li><li data-fr>4 vues sur fond blanc : face, dos, profil, détail</li><li data-en>€39 per product from 20 products</li><li data-fr>39 € par produit dès 20 produits</li><li data-en>€29 per product from 50 products</li><li data-fr>29 € par produit dès 50 produits</li><li data-en>Delivered in 5 days</li><li data-fr>Livré en 5 jours</li></ul>
+    <a class="btn" href="#contact"><span data-en>Start</span><span data-fr>Commencer</span></a></div>
+   <div class="plan"><h4 data-en>Campaign · Discovery</h4><h4 data-fr>Campagne · Découverte</h4><div class="price" data-en>€890</div><div class="price" data-fr>890 €</div><div class="per" data-en>excl. VAT · one-off</div><div class="per" data-fr>HT · ponctuel</div>
     <ul><li data-en>10 photos</li><li data-fr>10 photos</li><li data-en>3 vertical videos (8 s)</li><li data-fr>3 vidéos verticales (8 s)</li><li data-en>1 destination of your choice</li><li data-fr>1 destination au choix</li><li data-en>Delivered in 5 days</li><li data-fr>Livré en 5 jours</li></ul>
     <a class="btn dark" href="#contact"><span data-en>Start</span><span data-fr>Commencer</span></a></div>
-   <div class="plan feat"><h4 data-en>Collection</h4><h4 data-fr>Collection</h4><div class="price" data-en>€2,400</div><div class="price" data-fr>2 400 €</div><div class="per" data-en>excl. VAT · one-off</div><div class="per" data-fr>HT · ponctuel</div>
+   <div class="plan"><h4 data-en>Campaign · Collection</h4><h4 data-fr>Campagne · Collection</h4><div class="price" data-en>€2,400</div><div class="price" data-fr>2 400 €</div><div class="per" data-en>excl. VAT · one-off</div><div class="per" data-fr>HT · ponctuel</div>
     <ul><li data-en>30 photos</li><li data-fr>30 photos</li><li data-en>8 vertical videos (8 s)</li><li data-fr>8 vidéos verticales (8 s)</li><li data-en>3 destinations, on 3 continents if you like</li><li data-fr>3 destinations, sur 3 continents si vous voulez</li><li data-en>Up to 2 models</li><li data-fr>Jusqu'à 2 mannequins</li></ul>
-    <a class="btn" href="#contact"><span data-en>Book a call</span><span data-fr>Réserver un appel</span></a></div>
-   <div class="plan"><h4 data-en>Monthly</h4><h4 data-fr>Abonnement</h4><div class="price" data-en>€1,500</div><div class="price" data-fr>1 500 €</div><div class="per" data-en>excl. VAT · per month</div><div class="per" data-fr>HT · par mois</div>
-    <ul><li data-en>20 photos every month</li><li data-fr>20 photos chaque mois</li><li data-en>6 vertical videos</li><li data-fr>6 vidéos verticales</li><li data-en>A new destination every month, following your collections</li><li data-fr>Une nouvelle destination chaque mois, au rythme de vos collections</li><li data-en>Your dedicated model</li><li data-fr>Votre mannequin attitrée</li></ul>
+    <a class="btn dark" href="#contact"><span data-en>Book a call</span><span data-fr>Réserver un appel</span></a></div>
+   <div class="plan"><h4 data-en>Continuous collection</h4><h4 data-fr>Collection continue</h4><div class="price" data-en>€1,500</div><div class="price" data-fr>1 500 €</div><div class="per" data-en>excl. VAT · per month</div><div class="per" data-fr>HT · par mois</div>
+    <ul><li data-en>Up to 20 new products as product pages every month</li><li data-fr>Jusqu'à 20 nouveaux produits en fiches chaque mois</li><li data-en>10 campaign photos</li><li data-fr>10 photos de campagne</li><li data-en>3 vertical videos, a new destination every month</li><li data-fr>3 vidéos verticales, une nouvelle destination chaque mois</li><li data-en>Your dedicated model</li><li data-fr>Votre mannequin attitrée</li></ul>
     <a class="btn dark" href="#contact"><span data-en>Talk to us</span><span data-fr>Nous écrire</span></a></div>
   </div>
  </div>
@@ -323,8 +326,8 @@ section[id]{scroll-margin-top:68px}
  <div class="wrap">
   <div class="eyebrow">Contact</div>
   <h2 data-en>Let's dress our models<br>in your collection.</h2><h2 data-fr>Habillons nos mannequins<br>avec votre collection.</h2>
-  <p data-en>Send us 2 or 3 product photos: we'll send you back 3 free visuals of your pieces worn wherever you want.</p>
-  <p data-fr>Envoyez-nous 2 ou 3 photos produit : nous vous renvoyons 3 visuels offerts de vos pièces portées là où vous voulez.</p>
+  <p data-en>Send us photos of one of your pieces, front and back: we'll send it back for free, worn by our models: 4 views on a white background and one visual wherever you want.</p>
+  <p data-fr>Envoyez-nous les photos d'une de vos pièces, de face et de dos : nous vous la renvoyons gratuitement, portée par nos mannequins : 4 vues sur fond blanc et un visuel là où vous voulez.</p>
   <a class="mail" href="mailto:contact@azura-models.com?subject=AZURA%20Models">contact@azura-models.com</a>
  </div>
 </section>
@@ -337,7 +340,7 @@ section[id]{scroll-margin-top:68px}
 </footer>
 
 <script>
-const ASSET_V="202609270103";
+const ASSET_V="202609282125";
 const BOOKS={
  sofia:{name:"Sofia",imgs:["sofia-portrait","sofia-1","sofia-bijoux-cou","sofia-2","sofia-3","sofia-bijoux-mains","sofia-4","sofia-bijoux-montre","sofia-5","sofia-bijoux-oreille","sofia-maldives","sofia-heliport"],video:"../video/sofia-monaco.mp4"},
  elin:{name:"Elin",imgs:["elin-portrait","elin-1","elin-bijoux-cou","elin-2","elin-3","elin-bijoux-mains","elin-4","elin-bijoux-montre","elin-5","elin-bijoux-oreille","elin-ny","elin-alpes"],video:"../video/elin-monaco.mp4"},
