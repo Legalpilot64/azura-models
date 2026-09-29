@@ -161,6 +161,11 @@ html[lang=fr] [data-en]{display:none}
 .dest .cap span{font-size:10px;letter-spacing:.18em;text-transform:uppercase;opacity:.85}
 @media(max-width:900px){.dests{grid-template-columns:repeat(3,1fr)}}
 @media(max-width:560px){.dests{grid-template-columns:repeat(2,1fr);gap:10px}.dest .cap b{font-size:18px}}
+.fiche{margin-top:34px}.fiche h3{font-family:"Cormorant Garamond",serif;font-weight:400;font-size:26px;margin:0 0 4px}.fiche .sw{font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);margin-bottom:14px}
+.frow{display:grid;grid-template-columns:repeat(5,1fr);gap:12px}.frow figure{margin:0;aspect-ratio:2/3;overflow:hidden;background:#fff;cursor:pointer;position:relative}.frow img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .7s}.frow figure:hover img{transform:scale(1.03)}
+.frow figcaption{position:absolute;left:8px;bottom:8px;font-size:9px;letter-spacing:.18em;text-transform:uppercase;background:rgba(255,255,255,.88);color:#141414;padding:4px 7px}
+.fnote{margin-top:22px;font-size:12px;color:var(--muted)}
+@media(max-width:700px){.frow{grid-template-columns:repeat(5,44%);overflow-x:auto;scroll-snap-type:x mandatory}.frow figure{scroll-snap-align:start}}
 video::-webkit-media-controls-start-playback-button{display:none!important;-webkit-appearance:none}video::-webkit-media-controls{display:none!important}
 section[id]{scroll-margin-top:68px}
 </style>
@@ -176,6 +181,7 @@ section[id]{scroll-margin-top:68px}
   <nav class="links">
    <a href="#models"><span data-en>Models</span><span data-fr>Mannequins</span></a>
    <a href="#destinations"><span data-en>Destinations</span><span data-fr>Destinations</span></a>
+   <a href="#fiches"><span data-en>Product pages</span><span data-fr>Fiches produit</span></a>
    <a href="#services"><span data-en>Services</span><span data-fr>Services</span></a>
    <a href="#offers"><span data-en>Offers</span><span data-fr>Offres</span></a>
    <a href="#about"><span data-en>About</span><span data-fr>L'agence</span></a>
@@ -259,6 +265,26 @@ section[id]{scroll-margin-top:68px}
   </div>
  </div>
 </section>
+<section id="fiches">
+ <div class="wrap">
+  <div class="head">
+   <h2 data-en>Product pages,<br>in 4 views</h2><h2 data-fr>Fiches produit,<br>en 4 vues</h2>
+   <p data-en>Every product worn by our models in the studio, on a white background: front, back, side and detail, exactly what your e-shop needs. From €49 per product, delivered in 5 days.</p>
+   <p data-fr>Chaque produit porté par nos mannequins en studio, sur fond blanc : face, dos, profil et détail, exactement ce qu'il faut à votre e-shop. À partir de 49 € HT par produit, livré en 5 jours.</p>
+  </div>
+  <div class="fiche"><h3>Sofia</h3><div class="sw"><span data-en>Triangle bikini · ribbed terracotta</span><span data-fr>Bikini triangle · côtelé terracotta</span></div>
+   <div class="frow"><figure><img src="../img/fiches/sofia-0.webp" alt="Sofia · Product" loading="lazy"><figcaption><span data-en>Product</span><span data-fr>Produit</span></figcaption></figure><figure><img src="../img/fiches/sofia-1.webp" alt="Sofia · Front" loading="lazy"><figcaption><span data-en>Front</span><span data-fr>Face</span></figcaption></figure><figure><img src="../img/fiches/sofia-2.webp" alt="Sofia · Back" loading="lazy"><figcaption><span data-en>Back</span><span data-fr>Dos</span></figcaption></figure><figure><img src="../img/fiches/sofia-3.webp" alt="Sofia · Side" loading="lazy"><figcaption><span data-en>Side</span><span data-fr>Profil</span></figcaption></figure><figure><img src="../img/fiches/sofia-4.webp" alt="Sofia · Detail" loading="lazy"><figcaption><span data-en>Detail</span><span data-fr>Détail</span></figcaption></figure></div></div>
+  <div class="fiche"><h3>Elin</h3><div class="sw"><span data-en>One-piece · open back</span><span data-fr>Une-pièce · dos nu</span></div>
+   <div class="frow"><figure><img src="../img/fiches/elin-0.webp" alt="Elin · Product" loading="lazy"><figcaption><span data-en>Product</span><span data-fr>Produit</span></figcaption></figure><figure><img src="../img/fiches/elin-1.webp" alt="Elin · Front" loading="lazy"><figcaption><span data-en>Front</span><span data-fr>Face</span></figcaption></figure><figure><img src="../img/fiches/elin-2.webp" alt="Elin · Back" loading="lazy"><figcaption><span data-en>Back</span><span data-fr>Dos</span></figcaption></figure><figure><img src="../img/fiches/elin-3.webp" alt="Elin · Side" loading="lazy"><figcaption><span data-en>Side</span><span data-fr>Profil</span></figcaption></figure><figure><img src="../img/fiches/elin-4.webp" alt="Elin · Detail" loading="lazy"><figcaption><span data-en>Detail</span><span data-fr>Détail</span></figcaption></figure></div></div>
+  <div class="fiche"><h3>Amara</h3><div class="sw"><span data-en>Bandeau bikini · sunshine yellow</span><span data-fr>Bikini bandeau · jaune soleil</span></div>
+   <div class="frow"><figure><img src="../img/fiches/amara-0.webp" alt="Amara · Product" loading="lazy"><figcaption><span data-en>Product</span><span data-fr>Produit</span></figcaption></figure><figure><img src="../img/fiches/amara-1.webp" alt="Amara · Front" loading="lazy"><figcaption><span data-en>Front</span><span data-fr>Face</span></figcaption></figure><figure><img src="../img/fiches/amara-2.webp" alt="Amara · Back" loading="lazy"><figcaption><span data-en>Back</span><span data-fr>Dos</span></figcaption></figure><figure><img src="../img/fiches/amara-3.webp" alt="Amara · Side" loading="lazy"><figcaption><span data-en>Side</span><span data-fr>Profil</span></figcaption></figure><figure><img src="../img/fiches/amara-4.webp" alt="Amara · Detail" loading="lazy"><figcaption><span data-en>Detail</span><span data-fr>Détail</span></figcaption></figure></div></div>
+  <div class="fiche"><h3>Mei</h3><div class="sw"><span data-en>String bikini · cobalt</span><span data-fr>Bikini string · cobalt</span></div>
+   <div class="frow"><figure><img src="../img/fiches/mei-0.webp" alt="Mei · Product" loading="lazy"><figcaption><span data-en>Product</span><span data-fr>Produit</span></figcaption></figure><figure><img src="../img/fiches/mei-1.webp" alt="Mei · Front" loading="lazy"><figcaption><span data-en>Front</span><span data-fr>Face</span></figcaption></figure><figure><img src="../img/fiches/mei-2.webp" alt="Mei · Back" loading="lazy"><figcaption><span data-en>Back</span><span data-fr>Dos</span></figcaption></figure><figure><img src="../img/fiches/mei-3.webp" alt="Mei · Side" loading="lazy"><figcaption><span data-en>Side</span><span data-fr>Profil</span></figcaption></figure><figure><img src="../img/fiches/mei-4.webp" alt="Mei · Detail" loading="lazy"><figcaption><span data-en>Detail</span><span data-fr>Détail</span></figcaption></figure></div></div>
+  <div class="fiche"><h3>Maya</h3><div class="sw"><span data-en>High-waisted bikini · emerald</span><span data-fr>Bikini taille haute · émeraude</span></div>
+   <div class="frow"><figure><img src="../img/fiches/maya-0.webp" alt="Maya · Product" loading="lazy"><figcaption><span data-en>Product</span><span data-fr>Produit</span></figcaption></figure><figure><img src="../img/fiches/maya-1.webp" alt="Maya · Front" loading="lazy"><figcaption><span data-en>Front</span><span data-fr>Face</span></figcaption></figure><figure><img src="../img/fiches/maya-2.webp" alt="Maya · Back" loading="lazy"><figcaption><span data-en>Back</span><span data-fr>Dos</span></figcaption></figure><figure><img src="../img/fiches/maya-3.webp" alt="Maya · Side" loading="lazy"><figcaption><span data-en>Side</span><span data-fr>Profil</span></figcaption></figure><figure><img src="../img/fiches/maya-4.webp" alt="Maya · Detail" loading="lazy"><figcaption><span data-en>Detail</span><span data-fr>Détail</span></figcaption></figure></div></div>
+  <p class="fnote"><span data-en>Examples made on unbranded swimsuits created for this page.</span><span data-fr>Exemples réalisés sur des maillots sans marque créés pour cette page.</span></p>
+ </div>
+</section>
 <section id="services" class="dark">
  <div class="wrap">
   <div class="head">
@@ -340,7 +366,7 @@ section[id]{scroll-margin-top:68px}
 </footer>
 
 <script>
-const ASSET_V="202609282150";
+const ASSET_V="202609290959";
 const BOOKS={
  sofia:{name:"Sofia",imgs:["sofia-portrait","sofia-1","sofia-bijoux-cou","sofia-2","sofia-3","sofia-bijoux-mains","sofia-4","sofia-bijoux-montre","sofia-5","sofia-bijoux-oreille","sofia-maldives","sofia-heliport"],video:"../video/sofia-monaco.mp4"},
  elin:{name:"Elin",imgs:["elin-portrait","elin-1","elin-bijoux-cou","elin-2","elin-3","elin-bijoux-mains","elin-4","elin-bijoux-montre","elin-5","elin-bijoux-oreille","elin-ny","elin-alpes"],video:"../video/elin-monaco.mp4"},
@@ -365,6 +391,7 @@ let lbList=[],lbI=0;
 function lbShow(i){lbI=(i+lbList.length)%lbList.length;lbImg.src=lbList[lbI];lbCount.textContent=(lbI+1)+' / '+lbList.length}
 grid.addEventListener('click',e=>{if(e.target.tagName!=='IMG')return;lbList=[...grid.querySelectorAll('img')].map(i=>i.src);lbShow(lbList.indexOf(e.target.src));lb.classList.add('open')});
 const dests=document.querySelector('.dests');if(dests){dests.addEventListener('click',e=>{const img=e.target.closest('figure')&&e.target.closest('figure').querySelector('img');if(!img)return;lbList=[...dests.querySelectorAll('img')].map(i=>i.src);lbShow(lbList.indexOf(img.src));lb.classList.add('open')})}
+document.querySelectorAll('.frow').forEach(r=>r.addEventListener('click',e=>{const fg=e.target.closest('figure');if(!fg)return;const img=fg.querySelector('img');lbList=[...r.querySelectorAll('img')].map(i=>i.src);lbShow(lbList.indexOf(img.src));lb.classList.add('open')}));
 function lbClose(){lb.classList.remove('open')}
 document.getElementById('lbClose').onclick=lbClose;
 document.getElementById('lbPrev').onclick=e=>{e.stopPropagation();lbShow(lbI-1)};
