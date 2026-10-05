@@ -167,6 +167,21 @@ html[lang=fr] [data-en]{display:none}
 .fnote{margin-top:22px;font-size:12px;color:var(--muted)}
 @media(max-width:700px){.frow{grid-template-columns:repeat(5,44%);overflow-x:auto;scroll-snap-type:x mandatory}.frow figure{scroll-snap-align:start}}
 video::-webkit-media-controls-start-playback-button{display:none!important;-webkit-appearance:none}video::-webkit-media-controls{display:none!important}
+/* casting */
+.cfilters{display:flex;flex-wrap:wrap;gap:8px;margin:-26px 0 30px}
+.cfilters button{background:none;border:1px solid var(--line);padding:8px 16px;font:inherit;font-size:11px;letter-spacing:.18em;text-transform:uppercase;cursor:pointer;color:var(--ink)}
+.cfilters button.on,.cfilters button:hover{background:var(--ink);color:var(--cream);border-color:var(--ink)}
+.cgrid{display:grid;grid-template-columns:repeat(6,1fr);gap:14px}
+.cface{margin:0;cursor:zoom-in}.cface.hide{display:none}
+.cface img{aspect-ratio:3/4;object-fit:cover;width:100%;background:#ddd;transition:transform .7s}
+.cface:hover img{transform:scale(1.03)}.cface{overflow:hidden}
+.cface figcaption{padding:8px 0 4px}.cface b{display:block;font-family:"Cormorant Garamond",serif;font-weight:400;font-size:21px;line-height:1.1}
+.cface figcaption span{font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.cmore{aspect-ratio:3/4;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:18px;border:1px dashed var(--muted);text-decoration:none;cursor:pointer}
+.cmore .plus{font-family:"Cormorant Garamond",serif;font-size:56px;line-height:1}.cmore b{font-size:24px;margin:6px 0}.cmore span:not(.plus){font-size:13px;color:var(--muted)}
+.cmore:hover{background:var(--ink);color:var(--cream)}.cmore:hover span:not(.plus){color:#b9b0a4}
+@media(max-width:1100px){.cgrid{grid-template-columns:repeat(4,1fr)}}
+@media(max-width:700px){.cgrid{grid-template-columns:repeat(2,1fr);gap:10px}}
 section[id]{scroll-margin-top:68px}
 </style>
 <script type="application/ld+json">
@@ -180,6 +195,7 @@ section[id]{scroll-margin-top:68px}
   <a class="logo" href="#" aria-label="AZURA Models"><img class="logo-light" src="../img/logo/azura-models-horizontal-blanc.svg" alt="AZURA Models" width="190" height="50"><img class="logo-dark" src="../img/logo/azura-models-horizontal.svg" alt="" width="190" height="50"></a>
   <nav class="links">
    <a href="#models"><span data-en>Models</span><span data-fr>Mannequins</span></a>
+   <a href="#casting"><span data-en>Casting</span><span data-fr>Casting</span></a>
    <a href="#destinations"><span data-en>Destinations</span><span data-fr>Destinations</span></a>
    <a href="#fiches"><span data-en>Product pages</span><span data-fr>Fiches produit</span></a>
    <a href="#services"><span data-en>Services</span><span data-fr>Services</span></a>
@@ -238,6 +254,57 @@ section[id]{scroll-margin-top:68px}
  <div class="count" id="lbCount"></div>
 </div>
 
+<section id="casting" style="background:var(--sand)">
+ <div class="wrap">
+  <div class="head">
+   <h2 data-en>Any face,<br>on request</h2><h2 data-fr>Tous les visages,<br>sur demande</h2>
+   <p data-en>Beyond our six signature models, we cast the face your brand needs: any age, origin, size or style. Here are thirty profiles to spark ideas — just tell us who you have in mind.</p>
+   <p data-fr>Au-delà de nos six mannequins signature, nous créons le visage dont votre marque a besoin : tous les âges, toutes les origines, toutes les tailles, tous les styles. Voici trente profils pour vous donner des idées — dites-nous simplement qui vous imaginez.</p>
+  </div>
+  <div class="cfilters" role="group" aria-label="Filter">
+   <button class="on" data-f="all"><span data-en>All</span><span data-fr>Tous</span></button>
+   <button data-f="f"><span data-en>Women</span><span data-fr>Femmes</span></button>
+   <button data-f="m"><span data-en>Men</span><span data-fr>Hommes</span></button>
+   <button data-f="40"><span data-en>40+</span><span data-fr>40 ans et +</span></button>
+   <button data-f="curve"><span data-en>Curve</span><span data-fr>Grandes tailles</span></button>
+   <button data-f="modest"><span data-en>Modest luxury</span><span data-fr>Luxe modeste</span></button>
+  </div>
+  <div class="cgrid">
+   <figure class="cface" data-tags="f"><img src="../img/casting/valentina.webp" alt="Valentina, AI model" loading="lazy"><figcaption><b>Valentina</b><span data-en>Latina · 27 · evening glamour</span><span data-fr>Latina · 27 ans · glamour du soir</span></figcaption></figure>
+   <figure class="cface" data-tags="m 40"><img src="../img/casting/marco.webp" alt="Marco, AI model" loading="lazy"><figcaption><b>Marco</b><span data-en>Italian · 55 · silver fox</span><span data-fr>Italien · 55 ans · tempes argentées</span></figcaption></figure>
+   <figure class="cface" data-tags="f"><img src="../img/casting/afia.webp" alt="Afia, AI model" loading="lazy"><figcaption><b>Afia</b><span data-en>Afro · 25 · street & resort</span><span data-fr>Afro · 25 ans · street & resort</span></figcaption></figure>
+   <figure class="cface" data-tags="f 40"><img src="../img/casting/helene.webp" alt="Hélène, AI model" loading="lazy"><figcaption><b>Hélène</b><span data-en>Parisian · 58 · maison elegance</span><span data-fr>Parisienne · 58 ans · élégance maison</span></figcaption></figure>
+   <figure class="cface" data-tags="f"><img src="../img/casting/priya.webp" alt="Priya, AI model" loading="lazy"><figcaption><b>Priya</b><span data-en>Indian · 30 · jewellery</span><span data-fr>Indienne · 30 ans · joaillerie</span></figcaption></figure>
+   <figure class="cface" data-tags="m"><img src="../img/casting/lucas.webp" alt="Lucas, AI model" loading="lazy"><figcaption><b>Lucas</b><span data-en>French · 25 · surf & linen</span><span data-fr>Français · 25 ans · surf & lin</span></figcaption></figure>
+   <figure class="cface" data-tags="f curve"><img src="../img/casting/jade.webp" alt="Jade, AI model" loading="lazy"><figcaption><b>Jade</b><span data-en>Curve · 28 · resort</span><span data-fr>Grande taille · 28 ans · resort</span></figcaption></figure>
+   <figure class="cface" data-tags="f modest"><img src="../img/casting/hodan.webp" alt="Hodan, AI model" loading="lazy"><figcaption><b>Hodan</b><span data-en>Somali · 26 · modest luxury</span><span data-fr>Somalienne · 26 ans · luxe modeste</span></figcaption></figure>
+   <figure class="cface" data-tags="f"><img src="../img/casting/dasha.webp" alt="Dasha, AI model" loading="lazy"><figcaption><b>Dasha</b><span data-en>Eastern European · 25 · night</span><span data-fr>Europe de l'Est · 25 ans · nuit</span></figcaption></figure>
+   <figure class="cface" data-tags="m"><img src="../img/casting/malik.webp" alt="Malik, AI model" loading="lazy"><figcaption><b>Malik</b><span data-en>Black · 30 · menswear</span><span data-fr>Afro · 30 ans · mode homme</span></figcaption></figure>
+   <figure class="cface" data-tags="f 40"><img src="../img/casting/isabelle.webp" alt="Isabelle, AI model" loading="lazy"><figcaption><b>Isabelle</b><span data-en>French · 45 · natural chic</span><span data-fr>Française · 45 ans · chic naturel</span></figcaption></figure>
+   <figure class="cface" data-tags="f"><img src="../img/casting/kaia.webp" alt="Kaia, AI model" loading="lazy"><figcaption><b>Kaia</b><span data-en>Australian · 24 · beach</span><span data-fr>Australienne · 24 ans · plage</span></figcaption></figure>
+   <figure class="cface" data-tags="m"><img src="../img/casting/karim.webp" alt="Karim, AI model" loading="lazy"><figcaption><b>Karim</b><span data-en>North African · 30 · tailoring</span><span data-fr>Maghrébin · 30 ans · tailleur</span></figcaption></figure>
+   <figure class="cface" data-tags="f"><img src="../img/casting/ananya.webp" alt="Ananya, AI model" loading="lazy"><figcaption><b>Ananya</b><span data-en>Indian · 24 · bridal</span><span data-fr>Indienne · 24 ans · mariage</span></figcaption></figure>
+   <figure class="cface" data-tags="f"><img src="../img/casting/rose.webp" alt="Rose, AI model" loading="lazy"><figcaption><b>Rose</b><span data-en>English · 27 · romantic</span><span data-fr>Anglaise · 27 ans · romantique</span></figcaption></figure>
+   <figure class="cface" data-tags="m 40"><img src="../img/casting/henri.webp" alt="Henri, AI model" loading="lazy"><figcaption><b>Henri</b><span data-en>European · 63 · gentleman</span><span data-fr>Européen · 63 ans · gentleman</span></figcaption></figure>
+   <figure class="cface" data-tags="f"><img src="../img/casting/camila.webp" alt="Camila, AI model" loading="lazy"><figcaption><b>Camila</b><span data-en>Afro-Latina · 24 · colour</span><span data-fr>Afro-latina · 24 ans · couleur</span></figcaption></figure>
+   <figure class="cface" data-tags="f"><img src="../img/casting/signe.webp" alt="Signe, AI model" loading="lazy"><figcaption><b>Signe</b><span data-en>Danish · 28 · androgynous</span><span data-fr>Danoise · 28 ans · androgyne</span></figcaption></figure>
+   <figure class="cface" data-tags="m"><img src="../img/casting/mateo.webp" alt="Mateo, AI model" loading="lazy"><figcaption><b>Mateo</b><span data-en>Afro-Latino · 28 · Caribbean</span><span data-fr>Afro-latino · 28 ans · Caraïbes</span></figcaption></figure>
+   <figure class="cface" data-tags="f 40"><img src="../img/casting/leila.webp" alt="Leila, AI model" loading="lazy"><figcaption><b>Leila</b><span data-en>Lebanese · 46 · timeless</span><span data-fr>Libanaise · 46 ans · intemporelle</span></figcaption></figure>
+   <figure class="cface" data-tags="f curve"><img src="../img/casting/nina.webp" alt="Nina, AI model" loading="lazy"><figcaption><b>Nina</b><span data-en>Mid-size · 31 · everyday luxe</span><span data-fr>Taille 42 · 31 ans · luxe au quotidien</span></figcaption></figure>
+   <figure class="cface" data-tags="f"><img src="../img/casting/zuri.webp" alt="Zuri, AI model" loading="lazy"><figcaption><b>Zuri</b><span data-en>Black · 24 · avant-garde</span><span data-fr>Afro · 24 ans · avant-garde</span></figcaption></figure>
+   <figure class="cface" data-tags="m 40"><img src="../img/casting/julien.webp" alt="Julien, AI model" loading="lazy"><figcaption><b>Julien</b><span data-en>French · 40 · Riviera</span><span data-fr>Français · 40 ans · Riviera</span></figcaption></figure>
+   <figure class="cface" data-tags="f"><img src="../img/casting/anais.webp" alt="Anaïs, AI model" loading="lazy"><figcaption><b>Anaïs</b><span data-en>Eurasian · 25 · minimal</span><span data-fr>Eurasienne · 25 ans · minimaliste</span></figcaption></figure>
+   <figure class="cface" data-tags="f 40"><img src="../img/casting/marisol.webp" alt="Marisol, AI model" loading="lazy"><figcaption><b>Marisol</b><span data-en>Mexican · 48 · craft & heritage</span><span data-fr>Mexicaine · 48 ans · artisanat</span></figcaption></figure>
+   <figure class="cface" data-tags="f"><img src="../img/casting/ruby.webp" alt="Ruby, AI model" loading="lazy"><figcaption><b>Ruby</b><span data-en>Spanish · 29 · boho, tattoos</span><span data-fr>Espagnole · 29 ans · bohème, tatouages</span></figcaption></figure>
+   <figure class="cface" data-tags="f modest"><img src="../img/casting/ines.webp" alt="Ines, AI model" loading="lazy"><figcaption><b>Ines</b><span data-en>Lebanese · 26 · Gulf luxury</span><span data-fr>Libanaise · 26 ans · luxe du Golfe</span></figcaption></figure>
+   <figure class="cface" data-tags="f"><img src="../img/casting/lucia.webp" alt="Lucia, AI model" loading="lazy"><figcaption><b>Lucia</b><span data-en>Colombian · 26 · resort</span><span data-fr>Colombienne · 26 ans · resort</span></figcaption></figure>
+   <figure class="cface" data-tags="f"><img src="../img/casting/claire.webp" alt="Claire, AI model" loading="lazy"><figcaption><b>Claire</b><span data-en>Parisian · 35 · city chic</span><span data-fr>Parisienne · 35 ans · chic urbain</span></figcaption></figure>
+   <figure class="cface" data-tags="f"><img src="../img/casting/lea.webp" alt="Léa, AI model" loading="lazy"><figcaption><b>Léa</b><span data-en>French · 26 · petite, freckles</span><span data-fr>Française · 26 ans · petite, taches de rousseur</span></figcaption></figure>
+   <a class="cface cmore" href="#contact"><span class="plus">+</span><b data-en>Your face</b><b data-fr>Votre visage</b><span data-en>Describe the profile you need — we create it for you.</span><span data-fr>Décrivez le profil qu'il vous faut — nous le créons pour vous.</span></a>
+  </div>
+  <p class="fnote"><span data-en>Casting profiles: virtual faces available for your campaigns, or a starting point for a model made to measure.</span><span data-fr>Profils de casting : visages virtuels disponibles pour vos campagnes, ou point de départ pour une mannequin sur mesure.</span></p>
+ </div>
+</section>
 <section id="destinations">
  <div class="wrap">
   <div class="head">
@@ -366,7 +433,7 @@ section[id]{scroll-margin-top:68px}
 </footer>
 
 <script>
-const ASSET_V="202610011053";
+const ASSET_V="202610042240";
 const BOOKS={
  sofia:{name:"Sofia",imgs:["sofia-portrait","sofia-1","sofia-bijoux-cou","sofia-2","sofia-3","sofia-bijoux-mains","sofia-4","sofia-bijoux-montre","sofia-5","sofia-bijoux-oreille","sofia-maldives","sofia-heliport"],video:"../video/sofia-monaco.mp4"},
  elin:{name:"Elin",imgs:["elin-portrait","elin-1","elin-bijoux-cou","elin-2","elin-3","elin-bijoux-mains","elin-4","elin-bijoux-montre","elin-5","elin-bijoux-oreille","elin-ny","elin-alpes"],video:"../video/elin-monaco.mp4"},
@@ -400,6 +467,11 @@ lb.addEventListener('click',e=>{if(e.target===lb)lbClose()});
 let tx=null;lb.addEventListener('touchstart',e=>{tx=e.touches[0].clientX},{passive:true});
 lb.addEventListener('touchend',e=>{if(tx===null)return;const d=e.changedTouches[0].clientX-tx;if(Math.abs(d)>40)lbShow(lbI+(d<0?1:-1));tx=null});
 document.addEventListener('keydown',e=>{if(lb.classList.contains('open')){if(e.key==='Escape')lbClose();if(e.key==='ArrowRight')lbShow(lbI+1);if(e.key==='ArrowLeft')lbShow(lbI-1);return}if(e.key==='Escape')closeBook()});
+/* casting : filtres + zoom */
+(function(){const g=document.querySelector('.cgrid');if(!g)return;
+document.querySelectorAll('.cfilters button').forEach(b=>b.addEventListener('click',()=>{document.querySelectorAll('.cfilters button').forEach(x=>x.classList.toggle('on',x===b));const f=b.dataset.f;
+g.querySelectorAll('figure.cface').forEach(c=>c.classList.toggle('hide',f!=='all'&&!c.dataset.tags.split(' ').includes(f)))}));
+g.addEventListener('click',e=>{const fg=e.target.closest('figure.cface');if(!fg)return;const vis=[...g.querySelectorAll('figure.cface:not(.hide) img')];lbList=vis.map(i=>i.src);lbShow(lbList.indexOf(fg.querySelector('img').src));lb.classList.add('open')});})();
 const hdr=document.getElementById('top');
 addEventListener('scroll',()=>hdr.classList.toggle('solid',scrollY>40));
 document.documentElement.lang='fr';
