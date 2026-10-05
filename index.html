@@ -176,8 +176,8 @@ video::-webkit-media-controls-start-playback-button{display:none!important;-webk
 .cface figcaption{padding:8px 0 4px}.cface b{display:block;font-family:"Cormorant Garamond",serif;font-weight:400;font-size:21px;line-height:1.1}
 .cface figcaption span{font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
 .cmore{aspect-ratio:3/4;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:18px;border:1px dashed var(--muted);text-decoration:none;cursor:pointer}
-.cmore .plus{font-family:"Cormorant Garamond",serif;font-size:56px;line-height:1}.cmore b{font-size:24px;margin:6px 0}.cmore span:not(.plus){font-size:13px;color:var(--muted)}
-.cmore:hover{background:var(--ink);color:var(--cream)}.cmore:hover span:not(.plus){color:#b9b0a4}
+.cmore .plus{font-family:"Cormorant Garamond",serif;font-size:56px;line-height:1}.cmore b{font-size:24px;margin:6px 0}.cmore>span:not(.plus){font-size:13px;color:var(--muted)}
+.cmore:hover{background:var(--ink);color:var(--cream)}.cmore:hover>span:not(.plus){color:#b9b0a4}
 @media(max-width:1100px){.cgrid{grid-template-columns:repeat(4,1fr)}}
 @media(max-width:700px){.cgrid{grid-template-columns:repeat(2,1fr);gap:10px}}
 section[id]{scroll-margin-top:68px}
@@ -298,7 +298,7 @@ section[id]{scroll-margin-top:68px}
    <figure class="cface" data-tags="f"><img src="img/casting/lucia.webp" alt="Lucia, AI model" loading="lazy"><figcaption><b>Lucia</b><span data-en>Colombian · 26 · resort</span><span data-fr>Colombienne · 26 ans · resort</span></figcaption></figure>
    <figure class="cface" data-tags="f"><img src="img/casting/claire.webp" alt="Claire, AI model" loading="lazy"><figcaption><b>Claire</b><span data-en>Parisian · 35 · city chic</span><span data-fr>Parisienne · 35 ans · chic urbain</span></figcaption></figure>
    <figure class="cface" data-tags="f"><img src="img/casting/lea.webp" alt="Léa, AI model" loading="lazy"><figcaption><b>Léa</b><span data-en>French · 26 · petite, freckles</span><span data-fr>Française · 26 ans · petite, taches de rousseur</span></figcaption></figure>
-   <a class="cface cmore" href="#contact"><span class="plus">+</span><b data-en>Your face</b><b data-fr>Votre visage</b><span data-en>Describe the profile you need — we create it for you.</span><span data-fr>Décrivez le profil qu'il vous faut — nous le créons pour vous.</span></a>
+   <a class="cface cmore" href="#contact"><span class="plus">+</span><b><span data-en>Your face</span><span data-fr>Votre visage</span></b><span data-en>Describe the profile you need — we create it for you.</span><span data-fr>Décrivez le profil qu'il vous faut — nous le créons pour vous.</span></a>
   </div>
   <p class="fnote"><span data-en>Casting profiles: virtual faces available for your campaigns, or a starting point for a model made to measure.</span><span data-fr>Profils de casting : visages virtuels disponibles pour vos campagnes, ou point de départ pour une mannequin sur mesure.</span></p>
  </div>
@@ -431,7 +431,7 @@ section[id]{scroll-margin-top:68px}
 </footer>
 
 <script>
-const ASSET_V="202610042240";
+const ASSET_V="202610042246";
 const BOOKS={
  sofia:{name:"Sofia",imgs:["sofia-portrait","sofia-1","sofia-bijoux-cou","sofia-2","sofia-3","sofia-bijoux-mains","sofia-4","sofia-bijoux-montre","sofia-5","sofia-bijoux-oreille","sofia-maldives","sofia-heliport"],video:"video/sofia-monaco.mp4"},
  elin:{name:"Elin",imgs:["elin-portrait","elin-1","elin-bijoux-cou","elin-2","elin-3","elin-bijoux-mains","elin-4","elin-bijoux-montre","elin-5","elin-bijoux-oreille","elin-ny","elin-alpes"],video:"video/elin-monaco.mp4"},
